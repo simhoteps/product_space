@@ -81,7 +81,7 @@ const SignInPage = () => {
                       Hi there!
                     </Typography>
                     <Typography align="center" variant="caption">
-                      Welcome to Robenice. Community Dashboard
+                      Welcome to Product Space. Community Dashboard
                     </Typography>
                   </Stack>
 

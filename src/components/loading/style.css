@@ -1,0 +1,48 @@
+.wheel {
+  animation: animName 2s linear infinite;
+}
+@keyframes animName {
+  0% {
+    transition: all 0.1s linear;
+    opacity: 1;
+  }
+  20%,
+  80% {
+    transition: all 0.1s linear;
+    opacity: 0.3;
+  }
+  100% {
+    transition: all 0.1s linear;
+    opacity: 1;
+  }
+}
+
+.point1 {
+  animation: scaleName 2s linear infinite;
+}
+
+.point2 {
+  animation: scaleName 4s linear infinite;
+}
+
+.point3 {
+  animation: scaleName 2s linear infinite;
+}
+
+.point4 {
+  animation: scaleName 4s linear infinite;
+}
+@keyframes scaleName {
+  0% {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1);
+  }
+  50% {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
+  }
+  100% {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1);
+  }
+}

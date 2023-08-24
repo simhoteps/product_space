@@ -1,0 +1,35 @@
+.errorContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(47, 47, 69, 1) 0%,
+    rgba(30, 30, 44, 1) 100%
+  );
+}
+
+.imgStyles {
+  width: 80%;
+  height: auto;
+}
+
+.descText {
+  color: #a3a3c7;
+}
+
+.linkStyles {
+  text-decoration: "none";
+  color: rgb(181, 181, 181);
+  font-weight: 500;
+}
+
+.linkStyles:hover {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}

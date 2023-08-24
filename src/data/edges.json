@@ -1,0 +1,53 @@
+[
+    {
+        "id": "1",
+        "type": "input",
+        "data": {
+            "label": "Start"
+        },
+        "position": {
+            "x": 296,
+            "y": -34.5
+        },
+        "width": 150,
+        "height": 46,
+        "selected": false,
+        "positionAbsolute": {
+            "x": 296,
+            "y": -34.5
+        },
+        "dragging": false
+    },
+    {
+        "id": "dndnode_0",
+        "type": "textUpdater",
+        "position": {
+            "x": 467,
+            "y": 44.5
+        },
+        "data": {
+            "label": "textUpdater node"
+        },
+        "width": 163,
+        "height": 70,
+        "selected": true,
+        "positionAbsolute": {
+            "x": 467,
+            "y": 44.5
+        },
+        "dragging": true
+    },
+    {
+        "id": "dndnode_1",
+        "type": "apiService",
+        "position": {
+            "x": 310.5,
+            "y": 258
+        },
+        "data": {
+            "label": "apiService node"
+        },
+        "width": 150,
+        "height": 70
+    }
+]

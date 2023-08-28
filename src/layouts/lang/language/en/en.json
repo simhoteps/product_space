@@ -1,0 +1,19 @@
+{
+  "header": {
+    "language": "Language",
+    "themeLight": "Switch to light",
+    "themeDark":"Switch to dark",
+    "account":"Account",
+    "notif":"Notifications"
+  },
+  "dashboard": {
+    "part1": "What are fossils?"
+  },
+  "homeMap": {
+    "specificSection": "Jump to Specific Section",
+    "economicStructure": "Economic Structure",
+    "marketDynamics": "Market Dynamics",
+    "strategySpace": "Strategy Space",
+    "growthOpportunities": "Growth Opportunities"
+  }
+}

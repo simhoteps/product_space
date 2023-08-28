@@ -17,9 +17,7 @@ const Error404: FC = observer(() => {
       />
       <h1 className="descText">ERROR! PAGE NOT FOUNT</h1>
       <Link
-        onClick={() => {
-          mainStore.setTopbarTitle("Dashboard");
-        }}
+        onClick={() => {}}
         to="/dashboard"
         className="linkStyles"
         style={{ textDecoration: "none" }}

@@ -1,26 +1,17 @@
-import React from "react";
-import {
-  Avatar,
-  Divider,
-  IconButton,
-  ListItemIcon,
-  Menu,
-  MenuItem,
-  Stack,
-  Tooltip,
-  Typography,
-} from "@mui/material";
-import { Logout, PersonAdd, Settings } from "@mui/icons-material";
+import React, { ReactNode } from "react";
+import { IconButton, Menu, Stack, Tooltip, styled } from "@mui/material";
 import { useTheme } from "layouts/theme/ThemeContext";
-import PersonIcon from "@mui/icons-material/Person";
-import { observer } from "mobx-react";
-import { useStores } from "utils/hooks/use_store";
-import { useTranslation } from "react-i18next";
 
-const AccountSettings = () => {
+const HeadersMenu = ({
+  tooltipName,
+  buttonChild,
+  menuChild,
+}: {
+  tooltipName: string;
+  buttonChild: ReactNode;
+  menuChild: ReactNode;
+}) => {
   const { theme } = useTheme();
-  const { t } = useTranslation();
-  const { loginStore } = useStores();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -31,7 +22,7 @@ const AccountSettings = () => {
   };
   return (
     <div>
-      <Tooltip title={t("header.account")}>
+      <Tooltip title={tooltipName}>
         <IconButton
           onClick={handleClick}
           size="small"
@@ -39,13 +30,13 @@ const AccountSettings = () => {
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
         >
-          <PersonIcon sx={{ fontSize: "18px" }} />
+          {buttonChild}
         </IconButton>
       </Tooltip>
 
       <Menu
         anchorEl={anchorEl}
-        id="account-menu"
+        id="notifications-menu"
         open={open}
         onClose={handleClose}
         onClick={handleClose}
@@ -78,38 +69,10 @@ const AccountSettings = () => {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <Stack minWidth={"240px"} p={"20px"}>
-          <Stack gap={"4px"}>
-            <Typography pl={"14px"} variant="caption" fontWeight={700}>
-              Account:
-            </Typography>
-            <Typography pl={"14px"} variant="caption">
-              example@mail.com
-            </Typography>
-          </Stack>
-
-          <Divider sx={{ marginTop: "10px", marginBottom: "10px" }} />
-          <MenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <Settings fontSize="small" />
-            </ListItemIcon>
-            <Typography variant="caption">Settings</Typography>
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              handleClose();
-              loginStore.handleLogOut();
-            }}
-          >
-            <ListItemIcon>
-              <Logout fontSize="small" />
-            </ListItemIcon>
-            <Typography variant="caption">Logout</Typography>
-          </MenuItem>
-        </Stack>
+        {menuChild}
       </Menu>
     </div>
   );
 };
 
-export default observer(AccountSettings);
+export default HeadersMenu;

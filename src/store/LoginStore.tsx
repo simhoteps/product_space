@@ -37,7 +37,7 @@ export default class LoginStore {
   }
 
   //first action for login
-  handleLogin = async (value: VerifcationModel) => {
+  /*   handleLogin = async (value: VerifcationModel) => {
     try {
       if (value.Username) {
         var formdata = new FormData();
@@ -72,6 +72,25 @@ export default class LoginStore {
           .catch((_error) => {
             this.loginMessage = "The login details is incorrect.";
           });
+      }
+    } catch (error) {}
+  }; */
+
+  handleLogin = async (value: VerifcationModel) => {
+    try {
+      if (value.Username) {
+        var formdata = new FormData();
+        formdata.append("username", `${value.Username}`);
+        formdata.append("password", `${value.Password}`);
+
+        if (value.Username === "admin" && value.Password === "123456") {
+          this.currentUser = { key: "1234567899" };
+          sessionStorage.setItem("user", JSON.stringify({ key: "1234567899" }));
+          this.loginMessage = "";
+          document.location.reload();
+        } else {
+          this.loginMessage = "Network Error";
+        }
       }
     } catch (error) {}
   };

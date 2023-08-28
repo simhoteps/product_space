@@ -73,7 +73,7 @@ export const SubContainer = styled(Stack)(({ theme }) => ({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  width: "50%",
+  width: "100%",
   [theme.breakpoints.down("md")]: {
     width: "100%",
   },

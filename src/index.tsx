@@ -7,20 +7,20 @@ import { ThemeProvider } from "layouts/theme/ThemeContext";
 import { StoreProvider } from "store/_RootStoreProvider";
 import { RootStore } from "store/_RootStore";
 import { AppRoutes } from "route/AppRoutes";
-import { CustomerProvider } from "context/CustomerProvider";
+import { CityProvider } from "context/CityProvider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <CustomerProvider>
+    <CityProvider>
       <StoreProvider store={new RootStore()}>
         <ThemeProvider>
           <AppRoutes />
         </ThemeProvider>
       </StoreProvider>
-    </CustomerProvider>
+    </CityProvider>
   </React.StrictMode>
 );
 

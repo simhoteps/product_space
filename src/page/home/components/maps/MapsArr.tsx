@@ -1,9 +1,11 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useContext } from "react";
 import { Stack, Tooltip, Typography } from "@mui/material";
 import "./maps_style.css";
 import { useNavigate } from "react-router-dom";
-import { IMapData, IMapTooltip } from "page/home/types/types";
+
 import { turkeyCity } from "page/home/data/MapData";
+import { IMapData, IMapTooltip } from "types/CityTypes";
+import { cityContext } from "context/CityProvider";
 
 const CustomTooltip = ({ input }: { input: IMapTooltip }) => (
   <Stack gap={"8px"} padding={"8px"}>
@@ -17,8 +19,9 @@ const CustomTooltip = ({ input }: { input: IMapTooltip }) => (
   </Stack>
 );
 
-const MapsArr = ({ selectCity }: { selectCity?: IMapData }) => {
+const MapsArr = () => {
   const navigate = useNavigate();
+  const { citiesValue, setCitiesValue } = useContext(cityContext);
   return (
     <Stack width={"100%"}>
       <svg
@@ -42,9 +45,10 @@ const MapsArr = ({ selectCity }: { selectCity?: IMapData }) => {
                   id={city.plateCode}
                   data-city-name={city.city}
                   className="city"
-                  fill={selectCity?.name === city.name ? "#C56E4F" : "#75ACBA"}
+                  fill={citiesValue?.name === city.name ? "#C56E4F" : "#75ACBA"}
                   d={city.d}
                   onClick={() => {
+                    setCitiesValue(city);
                     navigate("/home/map/" + city.city);
                   }}
                 />

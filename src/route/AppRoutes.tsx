@@ -29,21 +29,23 @@ const AppRoutes: FC = () => {
             <Route path="error/*" element={<ErrorsPage />} />
             <Route path="logout" element={<Logout />} />
 
-            {loading ? (
+            {
+              /* loading ? (
               <>
                 <Route path="/*" element={<CustomLoading />} />
               </>
-            ) : sessionStorage.getItem("user") ? (
-              <>
-                <Route path="/*" element={<PrivateRoutes />} />
-                <Route index element={<Navigate to="/home" />} />
-              </>
-            ) : (
-              <>
-                <Route path="auth/*" element={<AuthPage />} />
-                <Route path="*" element={<Navigate to="/auth" />} />
-              </>
-            )}
+            ) : */ sessionStorage.getItem("user") ? (
+                <>
+                  <Route path="/*" element={<PrivateRoutes />} />
+                  <Route index element={<Navigate to="/" />} />
+                </>
+              ) : (
+                <>
+                  <Route path="auth/*" element={<AuthPage />} />
+                  <Route path="*" element={<Navigate to="/auth" />} />
+                </>
+              )
+            }
           </Route>
         </Routes>
       </Suspense>

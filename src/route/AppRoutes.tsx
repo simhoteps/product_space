@@ -29,12 +29,15 @@ const AppRoutes: FC = () => {
             <Route path="error/*" element={<ErrorsPage />} />
             <Route path="logout" element={<Logout />} />
 
-            {
-              /* loading ? (
+            <Route path="/*" element={<PrivateRoutes />} />
+            <Route index element={<Navigate to="/" />} />
+
+            {/*   {
+           loading ? (
               <>
                 <Route path="/*" element={<CustomLoading />} />
               </>
-            ) : */ sessionStorage.getItem("user") ? (
+            ) : sessionStorage.getItem("user") ? (
                 <>
                   <Route path="/*" element={<PrivateRoutes />} />
                   <Route index element={<Navigate to="/" />} />
@@ -45,7 +48,7 @@ const AppRoutes: FC = () => {
                   <Route path="*" element={<Navigate to="/auth" />} />
                 </>
               )
-            }
+            } */}
           </Route>
         </Routes>
       </Suspense>

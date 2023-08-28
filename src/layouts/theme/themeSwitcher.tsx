@@ -7,8 +7,10 @@ import lightTheme from "./light";
 import CustomTooltip from "../../components/tooltip/tooltip";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import { useTranslation } from "react-i18next";
 
 const ThemeSwitcher = () => {
+  const { t } = useTranslation();
   const { theme, setCurrentTheme } = useTheme();
 
   const setThemeFromString = (themeName: string | null) => {
@@ -43,8 +45,8 @@ const ThemeSwitcher = () => {
     <CustomTooltip
       title={
         localStorage.getItem("theme") === "light"
-          ? "Switch to dark"
-          : "Switch to light "
+          ? `${t("header.themeDark")}`
+          : ` ${t("header.themeLight")}`
       }
       placement="bottom"
     >

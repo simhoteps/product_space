@@ -15,6 +15,7 @@ import {
 import { StyledTextField } from "components/textField/CustomTextField";
 import { useStores } from "utils/hooks/use_store";
 import { observer } from "mobx-react";
+import RandomEcharts from "components/chats/RandomEcharts";
 
 interface ISignInForm {
   email: string;
@@ -166,12 +167,23 @@ const SignInPage = () => {
                   },
                 }}
               >
-                <img
+                <Stack
+                  sx={{
+                    display: "flex",
+                    height: "30vh",
+
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                ></Stack>
+                <RandomEcharts />
+
+                {/*       <img
                   alt="image"
                   width={"80%"}
                   height={"auto"}
                   src={toImageUrl("/media/login/loginImg.png")}
-                />
+                /> */}
               </SubContainer>
             </Container>
           </Form>

@@ -12,6 +12,7 @@ import {
 import { useTheme } from "layouts/theme/ThemeContext";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { useTranslation } from "react-i18next";
 
 const Container = styled(Stack)(({ theme }) => ({
   width: "320px",
@@ -59,6 +60,7 @@ const dataArr = [
 
 const NotificationsMenu = () => {
   const { theme } = useTheme();
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -69,7 +71,7 @@ const NotificationsMenu = () => {
   };
   return (
     <div>
-      <Tooltip title="Notifications">
+      <Tooltip title={t("header.notif")}>
         <IconButton
           onClick={handleClick}
           size="small"

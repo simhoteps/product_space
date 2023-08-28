@@ -1,0 +1,21 @@
+{
+  "header": {
+    "language": "Dil",
+    "themeLight": "Light moda geç",
+    "themeDark":"Dark moda geç",
+    "account":"Hesap",
+    "notif":"Bildirimler"
+
+  },
+  "dashboard": {
+    "part1": "Fosiller nelerdir?"
+  },
+  "homeMap": {
+    "specificSection": "Belirli Bölüme Atla",
+    "economicStructure": "Ekonomik Yapı",
+    "marketDynamics": "Pazar Dinamikleri",
+    "strategySpace": "Strateji Alanı",
+    "growthOpportunities": "Büyüme Fırsatları"
+  }
+
+}

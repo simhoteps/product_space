@@ -13,19 +13,6 @@ const TabContent = styled(Stack)(({ theme }) => ({
     theme.palette.primary.contrastText,
     0.1
   )} 0px 10px 10px -10px`,
-  /*   boxShadow: ` ${alpha(theme.palette.primary.contrastText, 0.15)}  0px 2px 8px`, */
-  /*   backgroundColor: "#d9e1d8", */
-  /*  backgroundColor: "#fcebd0", */
-  /* backgroundColor: ` ${alpha(theme.palette.warning.dark, 0.6)}`, */
-
-  /*   boxShadow: " -1px -1px 6px 3px rgba(0,0,0,0.1) inset", */
-  /*  boxShadow: ` ${alpha(
-    theme.palette.secondary.main,
-    0.25
-  )}  0px 2px 5px -1px,${alpha(
-    theme.palette.primary.contrastText,
-    0.3
-  )}  0px 1px 3px -1px `, */
 }));
 
 interface StyledTabsProps {

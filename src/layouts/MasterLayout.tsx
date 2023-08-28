@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import AppContainer from "components/box/AppContainer";
 import Topbar from "./topbar/Topbar";
 import { Outlet } from "react-router";
-import CustomMuiSidebar from "./sidebar/CustomSidebar";
 import { useStores } from "utils/hooks/use_store";
 import { observer } from "mobx-react";
 
@@ -18,18 +17,10 @@ const MasterLayout = () => {
   const url = window.location.href;
   const extractedPath = extractPathFromURL(url); */
 
-  useEffect(() => {
-    const title = sessionStorage.getItem("topbarTitle");
-    title && mainStore.setTopbarTitle(title);
-  }, []);
-
   return (
     <AppContainer>
-      <CustomMuiSidebar />
-      <div style={{ width: "100%" }}>
-        <Topbar />
-        <Outlet />
-      </div>
+      <Topbar />
+      <Outlet />
     </AppContainer>
   );
 };

@@ -8,8 +8,10 @@ import MiserablesEcharts from "components/chats/MiserablesEcharts";
 import ApexchartsLine from "components/chats/ApexchartsLine";
 import CustomLineCharts from "components/chats/CustomLineCharts";
 import { cityContext } from "context/CityProvider";
+import { useTheme } from "layouts/theme/ThemeContext";
 
 const HomeView = () => {
+  const { theme } = useTheme();
   const { citiesValue } = useContext(cityContext);
 
   return (
@@ -23,7 +25,15 @@ const HomeView = () => {
             <MapsArr />
           </Stack>
 
-          <Stack direction={"row"} gap={"24px"}>
+          <Stack
+            sx={{
+              [theme.breakpoints.down("lg")]: {
+                flexDirection: "column",
+              },
+            }}
+            direction={"row"}
+            gap={"24px"}
+          >
             <CustomLineCharts
               data={[[1131, 1604, 1240, 1731, 1304, 2101, 3501]]}
               colors={["#00baf0"]}

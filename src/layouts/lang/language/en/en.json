@@ -1,4 +1,7 @@
 {
+  "navigation":{
+    "back":"back"
+  },
   "header": {
     "language": "Language",
     "themeLight": "Switch to light",

@@ -10,24 +10,26 @@ import {
 
 const ButtonsBloks = ({ title, icon }: { title: string; icon: ReactNode }) => {
   return (
-    <Stack alignItems={"center"} gap={"8px"}>
+    <Stack alignItems={"center"} gap={"4px"}>
       <IconButton sx={{ padding: "16px" }}>{icon}</IconButton>
-      <Typography letterSpacing="0.1px" variant="overline">
+      <Typography align="center" letterSpacing="0.1px" variant="overline">
         {title}
       </Typography>
     </Stack>
   );
 };
 
-const SectionButtons = () => {
+const SectionButtons = ({ titleShow }: { titleShow?: boolean }) => {
   const { t } = useTranslation();
   return (
-    <Stack gap={"16px"}>
-      <Divider>
-        <Typography variant="subtitle2">
-          {t("homeMap.specificSection")}
-        </Typography>
-      </Divider>
+    <Stack gap={"16px"} width={"100%"}>
+      {titleShow && (
+        <Divider>
+          <Typography variant="subtitle2">
+            {t("homeMap.specificSection")}
+          </Typography>
+        </Divider>
+      )}
       <Stack direction={"row"} justifyContent={"space-between"}>
         <ButtonsBloks
           title={t("homeMap.economicStructure")}

@@ -67,8 +67,30 @@ const SignInPage = () => {
             <Container windowsize={windowsize}>
               <SubContainer>
                 <FormContainer>
+                  <Stack direction={"row"} gap={"16px"}>
+                    <img
+                      src={toImageUrl(
+                        "/media/img/kalkınma_ajanslari_genel_mudurlugu.png"
+                      )}
+                      alt=""
+                      style={{
+                        width: "200px",
+                        height: "200px",
+                      }}
+                    />
+                    <img
+                      src={toImageUrl(
+                        "/media/img/cukurova_kalkinma_ajansi.png"
+                      )}
+                      alt=""
+                      style={{
+                        width: "200px",
+                        height: "200px",
+                      }}
+                    />
+                  </Stack>
                   <Stack>
-                    <Typography
+                    {/*      <Typography
                       fontWeight={700}
                       align="center"
                       sx={{
@@ -80,7 +102,7 @@ const SignInPage = () => {
                       variant="h1"
                     >
                       Hi there!
-                    </Typography>
+                    </Typography> */}
                     <Typography align="center" variant="caption">
                       Welcome to Product Space. Community Dashboard
                     </Typography>
@@ -160,7 +182,7 @@ const SignInPage = () => {
                   </LoginButton>
                 </FormContainer>
               </SubContainer>
-              <SubContainer
+              {/*     <SubContainer
                 sx={{
                   [theme.breakpoints.down("md")]: {
                     display: "none",
@@ -176,15 +198,10 @@ const SignInPage = () => {
                     justifyContent: "center",
                   }}
                 ></Stack>
-                <RandomEcharts />
+                <RandomEcharts /> 
 
-                {/*       <img
-                  alt="image"
-                  width={"80%"}
-                  height={"auto"}
-                  src={toImageUrl("/media/login/loginImg.png")}
-                /> */}
-              </SubContainer>
+            
+              </SubContainer> */}
             </Container>
           </Form>
         );

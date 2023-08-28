@@ -1,4 +1,7 @@
 {
+  "navigation":{
+    "back":"geri"
+  },
   "header": {
     "language": "Dil",
     "themeLight": "Light moda geç",

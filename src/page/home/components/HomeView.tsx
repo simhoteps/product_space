@@ -1,33 +1,26 @@
-import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
 import { Stack, Grid, Button } from "@mui/material";
 import MapsArr from "./maps/MapsArr";
-import CityInfo from "./CityInfo";
+import CityDescription from "./CityDescription";
 import LineChatEcharts from "components/chats/LineChatEcharts";
 import PolarChartEcharts from "components/chats/PolarChartEcharts";
 import MiserablesEcharts from "components/chats/MiserablesEcharts";
 import ApexchartsLine from "components/chats/ApexchartsLine";
 import CustomLineCharts from "components/chats/CustomLineCharts";
-import { IMapData } from "../types/types";
-import { turkeyCity } from "../data/MapData";
+import { cityContext } from "context/CityProvider";
 
 const HomeView = () => {
-  const [value, setValue] = React.useState<IMapData | null>(turkeyCity[40]);
-  const [inputValue, setInputValue] = React.useState("");
+  const { citiesValue } = useContext(cityContext);
+
   return (
     <Grid spacing={4} container>
       <Grid xs={12} md={4} item>
-        <CityInfo
-          value={value}
-          setValue={setValue}
-          inputValue={inputValue}
-          setInputValue={setInputValue}
-        />
+        <CityDescription />
       </Grid>
       <Grid xs={12} md={8} item>
         <Stack direction={"column"} padding={"24px"}>
           <Stack width={"100%"}>
-            {value && <MapsArr selectCity={value} />}
+            <MapsArr />
           </Stack>
 
           <Stack direction={"row"} gap={"24px"}>

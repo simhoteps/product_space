@@ -5,39 +5,7 @@ import { turkeyCity } from "../data/MapData";
 import { Box, Stack, TextField, Typography, styled } from "@mui/material";
 import { Size, useWindowSize } from "utils/hooks/use_window_size";
 import SectionButtons from "./SectionButtons";
-import { IMapData } from "../types/types";
-
-function CountrySelect() {
-  return (
-    <Autocomplete
-      id="country-select-demo"
-      options={turkeyCity}
-      autoHighlight
-      getOptionLabel={(option) => option.city}
-      renderOption={(props, option) => (
-        <Box
-          component="li"
-          sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
-          {...props}
-        >
-          {option.name} ({option.plateCode})
-        </Box>
-      )}
-      renderInput={(params) => (
-        <TextField
-          {...params}
-          fullWidth
-          size="small"
-          label="Choose a city"
-          variant="outlined"
-          InputLabelProps={{
-            children: "Choose a city",
-          }}
-        />
-      )}
-    />
-  );
-}
+import CityAutocomplete from "./CityAutocomplete";
 
 const TextBorder = styled(Box)<{ windowsize: Size }>(
   ({ theme, windowsize }) => ({
@@ -70,56 +38,12 @@ const TextCotaniner = styled(Stack)(({ theme }) => ({
   },
 }));
 
-const CityInfo = ({
-  value,
-  setValue,
-  inputValue,
-  setInputValue,
-}: {
-  value: IMapData | null;
-  setValue: React.Dispatch<React.SetStateAction<IMapData | null>>;
-  inputValue: string;
-  setInputValue: React.Dispatch<React.SetStateAction<string>>;
-}) => {
+const CityDescription = () => {
   const windowsize: Size = useWindowSize();
 
   return (
     <Stack gap={"24px"}>
-      <Autocomplete
-        id="turkey_city_autocomplete"
-        options={turkeyCity}
-        value={value}
-        autoHighlight
-        inputValue={inputValue}
-        onInputChange={(event, newInputValue) => {
-          setInputValue(newInputValue);
-        }}
-        onChange={(event: any, newValue: IMapData | null) => {
-          setValue(newValue);
-        }}
-        getOptionLabel={(option) => option.city}
-        renderOption={(props, option) => (
-          <Box
-            component="li"
-            sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
-            {...props}
-          >
-            {option.name} ({option.plateCode})
-          </Box>
-        )}
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            fullWidth
-            size="small"
-            label="Choose a city"
-            variant="outlined"
-            InputLabelProps={{
-              children: "Choose a city",
-            }}
-          />
-        )}
-      />
+      <CityAutocomplete />
       <TextBorder windowsize={windowsize}>
         <TextCotaniner>
           <Typography variant="subtitle1">
@@ -157,9 +81,9 @@ const CityInfo = ({
         </TextCotaniner>
       </TextBorder>
 
-      <SectionButtons />
+      <SectionButtons titleShow={true} />
     </Stack>
   );
 };
 
-export default CityInfo;
+export default CityDescription;

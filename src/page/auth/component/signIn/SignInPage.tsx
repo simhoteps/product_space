@@ -67,7 +67,7 @@ const SignInPage = () => {
             <Container windowsize={windowsize}>
               <SubContainer>
                 <FormContainer>
-                  <Stack direction={"row"} gap={"16px"}>
+                  {/*  <Stack direction={"row"} gap={"16px"}>
                     <img
                       src={toImageUrl(
                         "/media/img/kalkınma_ajanslari_genel_mudurlugu.png"
@@ -88,9 +88,9 @@ const SignInPage = () => {
                         height: "200px",
                       }}
                     />
-                  </Stack>
+                  </Stack> */}
                   <Stack>
-                    {/*      <Typography
+                    <Typography
                       fontWeight={700}
                       align="center"
                       sx={{
@@ -102,7 +102,7 @@ const SignInPage = () => {
                       variant="h1"
                     >
                       Hi there!
-                    </Typography> */}
+                    </Typography>
                     <Typography align="center" variant="caption">
                       Welcome to Product Space. Community Dashboard
                     </Typography>
@@ -182,7 +182,7 @@ const SignInPage = () => {
                   </LoginButton>
                 </FormContainer>
               </SubContainer>
-              {/*     <SubContainer
+              <SubContainer
                 sx={{
                   [theme.breakpoints.down("md")]: {
                     display: "none",
@@ -198,10 +198,8 @@ const SignInPage = () => {
                     justifyContent: "center",
                   }}
                 ></Stack>
-                <RandomEcharts /> 
-
-            
-              </SubContainer> */}
+                <RandomEcharts />
+              </SubContainer>
             </Container>
           </Form>
         );

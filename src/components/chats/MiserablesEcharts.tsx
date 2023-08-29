@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Stack } from "@mui/material";
 import ReactEcharts from "echarts-for-react";
 import axios from "axios";
+import { Size, useWindowSize } from "utils/hooks/use_window_size";
 
 interface Igraph {
   nodes: {
@@ -1748,6 +1749,7 @@ const graphData: Igraph = {
 };
 
 const MiserablesEcharts = () => {
+  const windowsize: Size = useWindowSize();
   /*   const [graph, setGraph] = useState<Igraph>(); */
   /* 
   useEffect(() => {
@@ -1764,9 +1766,9 @@ const MiserablesEcharts = () => {
   }, []); */
 
   return (
-    <Stack width={"100%"} height={"1200px"}>
+    <Stack width={"100%"}>
       <ReactEcharts
-        style={{ height: "600px" }}
+        style={{ height: `calc(${windowsize?.height}px - 250px)` }}
         option={{
           tooltip: {},
 

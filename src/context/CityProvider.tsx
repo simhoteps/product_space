@@ -14,6 +14,8 @@ export function CityProvider({ children }: CityProviderProps) {
     turkeyCity[40]
   );
   const [inputValue, setInputValue] = useState("");
+  const [openFilter, setFilter] = useState<string>("economicStructure");
+  const [openSubFilter, setSubFilter] = useState<string>("exportBasket");
 
   return (
     <cityContext.Provider
@@ -22,6 +24,10 @@ export function CityProvider({ children }: CityProviderProps) {
         setCitiesValue,
         inputValue,
         setInputValue,
+        openFilter,
+        setFilter,
+        openSubFilter,
+        setSubFilter,
       }}
     >
       {children}

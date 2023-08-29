@@ -3,8 +3,12 @@ import { Autocomplete, Box, Stack, TextField } from "@mui/material";
 import { cityContext } from "context/CityProvider";
 import { turkeyCity } from "../data/MapData";
 import { IMapData } from "types/CityTypes";
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const CityAutocomplete = () => {
+const CityAutocomplete = (/* { navigateFn }: { navigateFn: () => void } */) => {
+  const navigate = useNavigate();
+  const { t } = useTranslation();
   const { citiesValue, setCitiesValue, inputValue, setInputValue } =
     useContext(cityContext);
   return (
@@ -21,8 +25,9 @@ const CityAutocomplete = () => {
         }}
         onChange={(event: any, newValue: IMapData | null) => {
           setCitiesValue(newValue);
+          /*    navigate(`/home/map/${newValue?.city}`); */
         }}
-        getOptionLabel={(option) => option.city}
+        getOptionLabel={(option) => option.name}
         renderOption={(props, option) => (
           <Box
             component="li"
@@ -37,7 +42,7 @@ const CityAutocomplete = () => {
             {...params}
             fullWidth
             size="small"
-            label="Choose a city"
+            label={t("autocomplete.chooseAcity")}
             variant="outlined"
             InputLabelProps={{
               children: "Choose a city",

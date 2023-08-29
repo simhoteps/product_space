@@ -16,6 +16,7 @@ import { useStores } from "utils/hooks/use_store";
 import LanguageSwitcher from "layouts/lang/language_switcher";
 import HeaderNav from "./components/HeaderNav";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 /* const AppBarCustom = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
@@ -69,6 +70,7 @@ const LoginButton = styled(Button)(({ theme }) => ({
 
 const Topbar = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
   const { loginStore } = useStores();
 
   return (
@@ -82,7 +84,9 @@ const Topbar = () => {
           }}
           to="/home"
         >
-          <h3 style={{ textTransform: "capitalize" }}>Product Space</h3>
+          <h3 style={{ textTransform: "capitalize" }}>
+            {t("topbar.productSpace")}
+          </h3>
         </Link>
         <HeaderNav />
         {loginStore.currentUser.key === undefined &&

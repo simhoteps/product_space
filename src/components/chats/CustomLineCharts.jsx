@@ -109,7 +109,7 @@ const Graph = ({ data, colors, range, labels }) => {
   return (
   <Stack  width={"100%"} alignItems={"center"}> 
     <div className="graph" ref={graph}>
-      <Marker
+  {/*     <Marker
         colors={colors}
         data={data}
         active={active}
@@ -117,7 +117,7 @@ const Graph = ({ data, colors, range, labels }) => {
         width={width}
         height={height}
         range={range}
-         /> 
+         />  */}
             <svg
             
             style={{transform: "scaleY(-1)" }}
@@ -142,7 +142,7 @@ const Graph = ({ data, colors, range, labels }) => {
 const CustomLineCharts = ({ data, colors, range, labels, title, subtitle,value1,value2,value3,valueText1,valueText2,valueText3 }) => (
   <Stack width={"100%"} alignItems={"center"}> 
     <Typography variant="caption" >{title}</Typography>
-    <Typography fontWeight={700} variant="h4" >{subtitle}</Typography>
+    <Typography fontWeight={700} variant="h5" >{subtitle}</Typography>
       <Stack width={"100%"} direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
         <Typography variant="subtitle2" >{ value1}</Typography>
         <Typography variant="body1" > {value2} </Typography>

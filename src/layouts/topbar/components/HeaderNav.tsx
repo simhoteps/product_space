@@ -1,5 +1,6 @@
 import React from "react";
 import { Stack, styled, Button, alpha } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const CustomButton = styled(Button)(({ theme }) => ({
   display: "flex",
@@ -22,13 +23,13 @@ const RowBox = styled(Stack)(({ theme }) => ({
 }));
 
 const HeaderNav = () => {
+  const { t } = useTranslation();
   return (
     <RowBox>
-      <CustomButton>Explore</CustomButton>
-      <CustomButton>Data</CustomButton>
-      <CustomButton>Publication</CustomButton>
-      <CustomButton>Learn</CustomButton>
-      <CustomButton>About</CustomButton>
+      <CustomButton> {t("topbar.explore")}</CustomButton>
+      <CustomButton> {t("topbar.data")}</CustomButton>
+      <CustomButton> {t("topbar.publication")}</CustomButton>
+      <CustomButton> {t("topbar.about")}</CustomButton>
     </RowBox>
   );
 };

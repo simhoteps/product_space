@@ -1,4 +1,11 @@
 {
+  "topbar":{
+    "productSpace":" Ürün uzayı",
+    "explore":"Keşif",
+    "data":"Data",
+    "publication":"Duyuru",
+    "about":"Hakkında"
+  },
   "navigation":{
     "back":"geri"
   },
@@ -16,9 +23,27 @@
   "homeMap": {
     "specificSection": "Belirli Bölüme Atla",
     "economicStructure": "Ekonomik Yapı",
+    "Introduction":"Giriş",
+    "exportBasket":"2023 Yılındaki İhracat Sepeti",
+    "exportComplexity":"2023'te İhracatın Karmaşıklığı",
     "marketDynamics": "Pazar Dinamikleri",
+    "exportGrowthDynamics":"İhracat Büyüme Dinamikleri",
+    "growthinGlobalMarketShare":"Küresel Pazar Payındaki Büyüme",
+    "diversificationIntoNewProducts":"Yeni Ürünlere Yönelik Çeşitlendirme",
     "strategySpace": "Strateji Alanı",
-    "growthOpportunities": "Büyüme Fırsatları"
+    "whatIstheProductSpace":"Ürün Uzayı Nedir?",
+    "productSpace":" Ürün Uzayı",
+    "EcommendedStrategicApproach":"Önerilen Stratejik Yaklaşım",
+    "growthOpportunities": "Büyüme Fırsatları",
+    "potentialGrowthOpportunities":"Potansiyel Büyüme Fırsatları",
+    "newProductOpportunities":"Yeni Ürün Fırsatları",
+    "summary":"Özet"
+  }, 
+  "buttons":{  
+    "searchForDetails":"Detay"
+  },
+  "autocomplete":{
+    "chooseAcity":"Bir şehir seçin"
   }
 
 }

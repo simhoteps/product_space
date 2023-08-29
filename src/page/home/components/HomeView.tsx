@@ -9,6 +9,8 @@ import ApexchartsLine from "components/chats/ApexchartsLine";
 import CustomLineCharts from "components/chats/CustomLineCharts";
 import { cityContext } from "context/CityProvider";
 import { useTheme } from "layouts/theme/ThemeContext";
+import NightingaleChartEcharts from "components/chats/NightingaleChartEcharts";
+import MultipleRadialbarsChart from "components/chats/MultipleRadialbarsChart";
 
 const HomeView = () => {
   const { theme } = useTheme();
@@ -32,7 +34,7 @@ const HomeView = () => {
               },
             }}
             direction={"row"}
-            gap={"24px"}
+            gap={"48px"}
           >
             <CustomLineCharts
               data={[[1131, 1604, 1240, 1731, 1304, 2101, 3501]]}
@@ -63,7 +65,8 @@ const HomeView = () => {
               valueText3={"2023"}
             />
 
-            <PolarChartEcharts />
+            <MultipleRadialbarsChart />
+            {/*      <PolarChartEcharts /> */}
           </Stack>
         </Stack>
       </Grid>

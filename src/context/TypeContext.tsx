@@ -6,4 +6,8 @@ export interface ICityContext {
   setCitiesValue: React.Dispatch<React.SetStateAction<IMapData | null>>;
   inputValue: string;
   setInputValue: React.Dispatch<React.SetStateAction<string>>;
+  openFilter: string;
+  setFilter: React.Dispatch<React.SetStateAction<string>>;
+  openSubFilter: string;
+  setSubFilter: React.Dispatch<React.SetStateAction<string>>;
 }

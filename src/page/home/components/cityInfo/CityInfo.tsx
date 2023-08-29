@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   Stack,
@@ -7,6 +7,7 @@ import {
   styled,
   IconButton,
   Typography,
+  alpha,
 } from "@mui/material";
 import PageContainer from "components/box/PageContainer";
 import { turkeyCity } from "page/home/data/MapData";
@@ -14,14 +15,38 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useTranslation } from "react-i18next";
 import CityAutocomplete from "../CityAutocomplete";
 import MiserablesEcharts from "components/chats/MiserablesEcharts";
-import SectionButtons from "../SectionButtons";
+import { SectionDashButtons } from "../SectionButtons";
 import TreemapEcharts from "components/chats/TreemapEcharts";
+import { cityContext } from "context/CityProvider";
 
-const BackText = styled(Typography)(({ theme }) => ({
-  ...theme.typography.subtitle1,
-  "&:hover": {
-    fontWeight: 700,
-  },
+const TitleText = styled(Typography)(({ theme }) => ({
+  ...theme.typography.h5,
+  textTransform: "uppercase",
+  width: "100%",
+  fontWeight: 700,
+  marginLeft: "-24px",
+}));
+
+const ChartContainer = styled(Stack)(({ theme }) => ({
+  width: "100%",
+  borderRadius: "16px",
+  padding: "24px",
+  border: `1px solid ${theme.palette.primary.light}`,
+  /*   boxShadow: `${alpha(
+    theme.palette.primary.contrastText,
+    0.3
+  )} 0px 2px 8px 0px`, */
+}));
+
+const TopTitle = styled(Typography)(({ theme }) => ({
+  ...theme.typography.caption,
+  borderBottom: `1px solid ${theme.palette.primary.light}`,
+  fontWeight: 500,
+}));
+
+const TopDesc = styled(Typography)(({ theme }) => ({
+  ...theme.typography.body2,
+  fontWeight: 700,
 }));
 
 const LeftContainer = styled(Stack)(({ theme }) => ({
@@ -35,6 +60,7 @@ const LeftContainer = styled(Stack)(({ theme }) => ({
 
 const BackButton = styled(IconButton)(({ theme }) => ({
   padding: "0px",
+  gap: "8px",
   "&:hover": {
     backgroundColor: "transparent",
   },
@@ -45,22 +71,25 @@ const CityInfo = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const selected = turkeyCity.find((option) => option.city === id);
-
+  const { openSubFilter } = useContext(cityContext);
   return (
     <PageContainer>
       <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
           <LeftContainer>
-            <BackButton
-              onClick={() => {
-                navigate("/home");
-              }}
-            >
-              <ArrowBackIcon /> <BackText>{t("navigation.back")}</BackText>
-            </BackButton>
-            <CityAutocomplete />
-            <SectionButtons />
-            <Typography variant="body1">
+            <Stack direction={"row"} width={"100%"}>
+              <BackButton
+                onClick={() => {
+                  navigate("/home");
+                }}
+              >
+                <ArrowBackIcon />
+                {/*   <BackText>{t("navigation.back")}</BackText> */}
+              </BackButton>
+              <TitleText align="center">{selected?.name}</TitleText>
+            </Stack>
+            <SectionDashButtons />
+            <Typography variant="body2">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
               making it over 2000 years old. Richard McClintock, a Latin
@@ -84,10 +113,33 @@ const CityInfo = () => {
 
         <Grid item xs={12} md={8}>
           <LeftContainer justifyContent={"center"}>
-            <Typography width={"100%"} align="center" variant="h3">
-              {selected?.name}
-            </Typography>
-            <MiserablesEcharts />
+            <Stack
+              direction={"row"}
+              width={"100%"}
+              justifyContent={"space-between"}
+            >
+              <Typography fontWeight={700} variant="h6">
+                {t(`homeMap.${openSubFilter}`)}
+              </Typography>
+              <Stack direction={"row"} gap={"24px"}>
+                <Stack gap={"4px"} alignItems={"center"}>
+                  <TopTitle>Total Exports</TopTitle>
+                  <TopDesc>TL 900B</TopDesc>
+                </Stack>
+                <Stack gap={"4px"} alignItems={"center"}>
+                  <TopTitle>Exporter Rank</TopTitle>
+                  <TopDesc>5. OF 133</TopDesc>
+                </Stack>
+                <Stack gap={"4px"} alignItems={"center"}>
+                  <TopTitle>Current Account</TopTitle>
+                  <TopDesc>TL 450B</TopDesc>
+                </Stack>
+              </Stack>
+            </Stack>
+            <ChartContainer>
+              <MiserablesEcharts />
+            </ChartContainer>
+
             {/*     <TreemapEcharts /> */}
           </LeftContainer>
         </Grid>

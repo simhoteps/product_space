@@ -49,7 +49,7 @@ const MapsArr = () => {
                   d={city.d}
                   onClick={() => {
                     setCitiesValue(city);
-                    navigate("/home/map/" + city.city);
+                    /*    navigate("/home/map/" + city.city); */
                   }}
                 />
               </Tooltip>

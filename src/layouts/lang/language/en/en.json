@@ -1,4 +1,11 @@
 {
+  "topbar":{
+    "productSpace":" Product Space",
+    "explore":"Explore",
+    "data":"Data",
+    "publication":"Publication",
+    "about":"About"
+  },
   "navigation":{
     "back":"back"
   },
@@ -15,8 +22,26 @@
   "homeMap": {
     "specificSection": "Jump to Specific Section",
     "economicStructure": "Economic Structure",
+    "Introduction":"Introduction",
+    "exportBasket":"Export Basket in 2023",
+    "exportComplexity":"Export Complexity in 2023",
     "marketDynamics": "Market Dynamics",
+    "exportGrowthDynamics":"Export Growth Dynamics",
+    "growthinGlobalMarketShare":"Growth in Global Market Share",
+    "diversificationIntoNewProducts":"Diversification into New Products",
     "strategySpace": "Strategy Space",
-    "growthOpportunities": "Growth Opportunities"
+    "whatIstheProductSpace":"What is the Product Space",
+    "productSpace":" Product Space",
+    "EcommendedStrategicApproach":"Recommended Strategic Approach",
+    "growthOpportunities": "Growth Opportunities",
+    "potentialGrowthOpportunities":"Potential Growth Opportunities",
+    "newProductOpportunities":"New Product Opportunities",
+    "summary":" Summary"
+  },  
+  "buttons":{  
+    "searchForDetails":"Search For Details"
+  },
+  "autocomplete":{
+    "chooseAcity":"Choose a city"
   }
 }

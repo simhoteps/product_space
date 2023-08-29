@@ -14,7 +14,7 @@ import AccountSettings from "./components/AccountSettings";
 import NotificationsMenu from "./components/Notifications";
 import { useStores } from "utils/hooks/use_store";
 import LanguageSwitcher from "layouts/lang/language_switcher";
-import HeaderNav from "./components/HeaderNav";
+import { HeaderNav, HeaderNavMobile } from "./components/HeaderNav";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -97,6 +97,7 @@ const Topbar = () => {
           </RowBox>
         ) : (
           <RowBox>
+            <HeaderNavMobile />
             <LanguageSwitcher />
             <ThemeSwitcher />
             <NotificationsMenu />

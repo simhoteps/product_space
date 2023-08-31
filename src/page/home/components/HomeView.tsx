@@ -1,16 +1,11 @@
 import React, { useContext } from "react";
-import { Stack, Grid, Button } from "@mui/material";
+import { Stack, Grid, Button, Divider, Typography } from "@mui/material";
 import MapsArr from "./maps/MapsArr";
 import CityDescription from "./CityDescription";
-import LineChatEcharts from "components/chats/LineChatEcharts";
-import PolarChartEcharts from "components/chats/PolarChartEcharts";
-import MiserablesEcharts from "components/chats/MiserablesEcharts";
-import ApexchartsLine from "components/chats/ApexchartsLine";
-import CustomLineCharts from "components/chats/CustomLineCharts";
 import { cityContext } from "context/CityProvider";
 import { useTheme } from "layouts/theme/ThemeContext";
-import NightingaleChartEcharts from "components/chats/NightingaleChartEcharts";
-import MultipleRadialbarsChart from "components/chats/MultipleRadialbarsChart";
+
+import ColumnBasicChartEcharts from "components/chats/ColumnBasicChartEcharts";
 
 const HomeView = () => {
   const { theme } = useTheme();
@@ -26,8 +21,16 @@ const HomeView = () => {
           <Stack width={"100%"}>
             <MapsArr />
           </Stack>
+          <Stack width={"100%"}>
+            <Divider>
+              <Typography variant="subtitle2">
+                Ekonomik Kompleksite (ECI)
+              </Typography>
+            </Divider>
+            <ColumnBasicChartEcharts />
+          </Stack>
 
-          <Stack
+          {/*       <Stack
             sx={{
               [theme.breakpoints.down("lg")]: {
                 flexDirection: "column",
@@ -66,8 +69,8 @@ const HomeView = () => {
             />
 
             <MultipleRadialbarsChart />
-            {/*      <PolarChartEcharts /> */}
-          </Stack>
+         
+          </Stack> */}
         </Stack>
       </Grid>
     </Grid>

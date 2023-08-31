@@ -1,20 +1,59 @@
 import React, { ReactNode, useContext } from "react";
-import { Stack, Tooltip, Typography } from "@mui/material";
+import { Stack, Tooltip, Typography, styled } from "@mui/material";
 import "./maps_style.css";
 import { useNavigate } from "react-router-dom";
-
-import { turkeyCity } from "page/home/data/MapData";
 import { IMapData, IMapTooltip } from "types/CityTypes";
 import { cityContext } from "context/CityProvider";
+import { turkeySGKData } from "page/home/data/NewData";
+
+const TextBorder = styled(Stack)(({ theme }) => ({
+  flexWrap: "nowrap",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: "4px",
+}));
+
+const TitleText = styled(Typography)(({ theme }) => ({
+  ...theme.typography.caption,
+  flexWrap: "nowrap",
+}));
 
 const CustomTooltip = ({ input }: { input: IMapTooltip }) => (
   <Stack gap={"8px"} padding={"8px"}>
     <Typography variant="subtitle2">{input.title}</Typography>
     <Stack gap={"4px"}>
-      <Typography variant="caption">Data 1 : {input.data1}</Typography>
-      <Typography variant="caption">Data 2 : {input.data2}</Typography>
-      <Typography variant="caption">Data 3 : {input.data3}</Typography>
-      <Typography variant="caption">Data 4 : {input.data4}</Typography>
+      <TextBorder>
+        <TitleText>KBGSYİH2021 (TÜİK-TL):</TitleText>
+        <Typography fontWeight={700} variant="caption">
+          {input.tuik}
+        </Typography>
+      </TextBorder>
+      <TextBorder>
+        <TitleText> Ekonomik Kompleksite (ECI):</TitleText>
+        <Typography fontWeight={700} variant="caption">
+          {input.eci}
+        </Typography>
+      </TextBorder>
+      <TextBorder>
+        <TitleText> Açık Orman (lnOF):</TitleText>
+        <Typography fontWeight={700} variant="caption">
+          {input.inOF}
+        </Typography>
+      </TextBorder>
+
+      <TextBorder>
+        <TitleText> Çeşitlilik (Div RCA{">"}1):</TitleText>
+        <Typography fontWeight={700} variant="caption">
+          {input.rca}
+        </Typography>
+      </TextBorder>
+
+      <TextBorder>
+        <TitleText> Ort Sıradanlık (Avg_Ubiq) :</TitleText>
+        <Typography fontWeight={700} variant="caption">
+          {input.avgUbiq}
+        </Typography>
+      </TextBorder>
     </Stack>
   </Stack>
 );
@@ -34,12 +73,23 @@ const MapsArr = () => {
         }}
       >
         <g>
-          {turkeyCity.map((city) => {
+          {turkeySGKData.map((city) => {
             return (
               <Tooltip
                 arrow
                 key={city.plateCode}
-                title={<CustomTooltip input={{ title: city.name }} />}
+                title={
+                  <CustomTooltip
+                    input={{
+                      title: city.name,
+                      tuik: city.tuik,
+                      eci: city.eci,
+                      inOF: city.inOF,
+                      rca: city.rca,
+                      avgUbiq: city.AvgUbiq,
+                    }}
+                  />
+                }
               >
                 <path
                   id={city.plateCode}

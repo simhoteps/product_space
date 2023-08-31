@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { Autocomplete, Box, Stack, TextField } from "@mui/material";
 import { cityContext } from "context/CityProvider";
-import { turkeyCity } from "../data/MapData";
+
 import { IMapData } from "types/CityTypes";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { turkeySGKData } from "../data/NewData";
 
 const CityAutocomplete = (/* { navigateFn }: { navigateFn: () => void } */) => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const CityAutocomplete = (/* { navigateFn }: { navigateFn: () => void } */) => {
       {" "}
       <Autocomplete
         id="turkey_city_autocomplete"
-        options={turkeyCity}
+        options={turkeySGKData}
         value={citiesValue}
         autoHighlight
         inputValue={inputValue}

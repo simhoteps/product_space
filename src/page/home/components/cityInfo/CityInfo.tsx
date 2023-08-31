@@ -10,14 +10,12 @@ import {
   alpha,
 } from "@mui/material";
 import PageContainer from "components/box/PageContainer";
-import { turkeyCity } from "page/home/data/MapData";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useTranslation } from "react-i18next";
-import CityAutocomplete from "../CityAutocomplete";
 import MiserablesEcharts from "components/chats/MiserablesEcharts";
 import { SectionDashButtons } from "../SectionButtons";
-import TreemapEcharts from "components/chats/TreemapEcharts";
 import { cityContext } from "context/CityProvider";
+import { turkeySGKData } from "page/home/data/NewData";
 
 const TitleText = styled(Typography)(({ theme }) => ({
   ...theme.typography.h5,
@@ -70,7 +68,7 @@ const CityInfo = () => {
   const { id } = useParams();
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const selected = turkeyCity.find((option) => option.city === id);
+  const selected = turkeySGKData.find((option) => option.city === id);
   const { openSubFilter } = useContext(cityContext);
   return (
     <PageContainer>

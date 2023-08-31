@@ -1,9 +1,11 @@
 export interface IMapTooltip{
     title: string;
-    data1?: string;
-    data2?: string;
-    data3?: string;
-    data4?: string;
+       tuik?: string,
+      eci?: string,
+      inOF?:string,
+      rca?:string,
+      avgUbiq?:string,
+
   }
   
 
@@ -14,4 +16,8 @@ export interface IMapTooltip{
         color: string,
         d:string
   }
+
+
+
   
+

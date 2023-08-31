@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import Autocomplete from "@mui/material/Autocomplete";
-import { turkeyCity } from "../data/MapData";
 import { Box, Stack, TextField, Typography, styled } from "@mui/material";
 import { Size, useWindowSize } from "utils/hooks/use_window_size";
 import { SectionButtons } from "./SectionButtons";

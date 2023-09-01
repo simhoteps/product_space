@@ -1,12 +1,19 @@
 import { Stack } from "@mui/material";
-import React from "react";
+import { cityContext } from "context/CityProvider";
+import numeral from "numeral";
+import { turkeySGKData } from "page/home/data/NewData";
+import React, { useContext, useState } from "react";
 import Chart from "react-apexcharts";
 
-const data = [44, 55, 67, 83]; // yüzde değeri
-const dataTotal = "249"; // toplam adet
-const labelsName = ["Data 1", "Data 2", "Data 3", " Data 4"];
-
-const MultipleRadialbarsChart = () => {
+const MultipleRadialbarsChart = ({
+  labelsName,
+  dataTotal,
+  data,
+}: {
+  labelsName: string[];
+  dataTotal: string;
+  data: (number | null)[];
+}) => {
   return (
     <Stack width={"100%"}>
       <Chart
@@ -36,7 +43,7 @@ const MultipleRadialbarsChart = () => {
           },
           labels: labelsName,
         }}
-        series={data}
+        series={[123, 56, 78, 9, 34]}
         type="radialBar"
         width="auto"
         height="240px"

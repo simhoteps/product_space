@@ -36,7 +36,7 @@ const ColumnBasicChartEcharts = () => {
   });
 
   return (
-    <Stack width={"120%"} marginLeft={"-9%"} marginTop={"-60px"}>
+    <Stack width={"120%"} marginBottom={"24px"} marginLeft={"-9%"}>
       <ReactEcharts
         option={{
           tooltip: {

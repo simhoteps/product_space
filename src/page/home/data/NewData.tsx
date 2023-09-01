@@ -9,7 +9,8 @@ export const turkeySGKData = [
     eci: "0,99",
     inOF: "16,00",
     rca: "603",
-    AvgUbiq: "19,38 ",
+    AvgUbiq: "19,38",
+    group: "4",
   },
   {
     name: "Adıyaman",
@@ -22,6 +23,7 @@ export const turkeySGKData = [
     inOF: "15,17",
     rca: "224",
     AvgUbiq: "27,75",
+    group: "2",
   },
   {
     name: "Afyonkarahisar",
@@ -34,6 +36,7 @@ export const turkeySGKData = [
     inOF: "15,61",
     rca: "369",
     AvgUbiq: "25,52",
+    group: "1",
   },
   {
     name: "Ağrı",
@@ -46,6 +49,7 @@ export const turkeySGKData = [
     inOF: "14,93",
     rca: "170",
     AvgUbiq: "29.72",
+    group: "2",
   },
   {
     name: "Aksaray",
@@ -58,6 +62,7 @@ export const turkeySGKData = [
     inOF: "15,55",
     rca: "336",
     AvgUbiq: "25,84",
+    group: "2",
   },
   {
     name: "Amasya",
@@ -70,6 +75,7 @@ export const turkeySGKData = [
     inOF: "15,58",
     rca: "349",
     AvgUbiq: "26,48",
+    group: "1",
   },
   {
     name: "Ankara",
@@ -82,6 +88,7 @@ export const turkeySGKData = [
     inOF: "16,1",
     rca: "753",
     AvgUbiq: "15",
+    group: "4",
   },
   {
     name: "Antalya",
@@ -94,6 +101,7 @@ export const turkeySGKData = [
     inOF: "15,92 ",
     rca: " 521",
     AvgUbiq: "18,56 ",
+    group: "4",
   },
   {
     name: "Ardahan",
@@ -106,6 +114,7 @@ export const turkeySGKData = [
     inOF: "14,76 ",
     rca: "144 ",
     AvgUbiq: "34,30 ",
+    group: "2",
   },
   {
     name: "Artvin",
@@ -118,6 +127,7 @@ export const turkeySGKData = [
     inOF: "15,23",
     rca: "243",
     AvgUbiq: "29,65",
+    group: "2",
   },
   {
     name: "Aydın",
@@ -130,6 +140,7 @@ export const turkeySGKData = [
     inOF: "15,82 ",
     rca: "497 ",
     AvgUbiq: "23,49",
+    group: "4",
   },
 
   {
@@ -143,6 +154,7 @@ export const turkeySGKData = [
     inOF: "15,84",
     rca: "508 ",
     AvgUbiq: "22,13",
+    group: "4",
   },
   {
     name: "Bartın",
@@ -155,6 +167,7 @@ export const turkeySGKData = [
     inOF: "15,41 ",
     rca: "282 ",
     AvgUbiq: "28,48 ",
+    group: "2",
   },
   {
     name: "Batman",
@@ -167,6 +180,7 @@ export const turkeySGKData = [
     inOF: "15,23 ",
     rca: "229 ",
     AvgUbiq: "23,94 ",
+    group: "3",
   },
   {
     name: "Bayburt",
@@ -179,6 +193,7 @@ export const turkeySGKData = [
     inOF: "15,03 ",
     rca: "193 ",
     AvgUbiq: "32,74 ",
+    group: "2",
   },
   {
     name: "Bilecik",
@@ -191,6 +206,7 @@ export const turkeySGKData = [
     inOF: "15,25 ",
     rca: "235 ",
     AvgUbiq: "22,84 ",
+    group: "3",
   },
   {
     name: "Bingol",
@@ -203,6 +219,7 @@ export const turkeySGKData = [
     inOF: "15,15 ",
     rca: "218 ",
     AvgUbiq: " 29,44",
+    group: "2",
   },
   {
     name: "Bitlis",
@@ -215,6 +232,7 @@ export const turkeySGKData = [
     inOF: "14,96 ",
     rca: "177 ",
     AvgUbiq: "29,64 ",
+    group: "2",
   },
   {
     name: "Bolu",
@@ -227,6 +245,7 @@ export const turkeySGKData = [
     inOF: "15,41 ",
     rca: "274 ",
     AvgUbiq: "24,07 ",
+    group: "3",
   },
   {
     name: "Burdur",
@@ -239,6 +258,7 @@ export const turkeySGKData = [
     inOF: "15,45",
     rca: " 309",
     AvgUbiq: "28,02",
+    group: "2",
   },
   {
     name: "Bursa",
@@ -251,6 +271,7 @@ export const turkeySGKData = [
     inOF: "15,92 ",
     rca: "534 ",
     AvgUbiq: "14,98 ",
+    group: "4",
   },
   {
     name: "Çanakkale",
@@ -263,6 +284,7 @@ export const turkeySGKData = [
     inOF: "15,66 ",
     rca: "400 ",
     AvgUbiq: "24,69",
+    group: "4",
   },
   {
     name: "Çankırı",
@@ -275,6 +297,7 @@ export const turkeySGKData = [
     inOF: "15,02 ",
     rca: "191 ",
     AvgUbiq: "27,81 ",
+    group: "2",
   },
   {
     name: "Çorum",
@@ -287,6 +310,7 @@ export const turkeySGKData = [
     inOF: "15,6",
     rca: "362",
     AvgUbiq: "25,58 ",
+    group: "1",
   },
   {
     name: "Denizli",
@@ -299,6 +323,7 @@ export const turkeySGKData = [
     inOF: "15,83",
     rca: "477",
     AvgUbiq: "19,36",
+    group: "4",
   },
   {
     name: "Diyarbakır",
@@ -311,6 +336,7 @@ export const turkeySGKData = [
     inOF: "15,54 ",
     rca: "325 ",
     AvgUbiq: "22,93 ",
+    group: "3",
   },
   {
     name: "Düzce",
@@ -323,6 +349,7 @@ export const turkeySGKData = [
     inOF: "15,52 ",
     rca: "317 ",
     AvgUbiq: "21,76 ",
+    group: "3",
   },
   {
     name: "Edirne",
@@ -335,6 +362,7 @@ export const turkeySGKData = [
     inOF: "15,6 ",
     rca: "354 ",
     AvgUbiq: "26,08 ",
+    group: "1",
   },
   {
     name: "Elazığ",
@@ -347,6 +375,7 @@ export const turkeySGKData = [
     inOF: "15,57 ",
     rca: "354 ",
     AvgUbiq: "25,53 ",
+    group: "1",
   },
   {
     name: "Erzincan",
@@ -359,6 +388,7 @@ export const turkeySGKData = [
     inOF: "15,32",
     rca: "270",
     AvgUbiq: "28,21",
+    group: "2",
   },
   {
     name: "Erzurum",
@@ -371,6 +401,7 @@ export const turkeySGKData = [
     inOF: "15,46",
     rca: "303",
     AvgUbiq: "26,16",
+    group: "2",
   },
   {
     name: "Eskişehir",
@@ -383,6 +414,7 @@ export const turkeySGKData = [
     inOF: "15,67 ",
     rca: "383 ",
     AvgUbiq: "18.92 ",
+    group: "4",
   },
   {
     name: "Gaziantep",
@@ -395,6 +427,7 @@ export const turkeySGKData = [
     inOF: "15,68 ",
     rca: "395 ",
     AvgUbiq: "17,37 ",
+    group: "4",
   },
   {
     name: "Giresun",
@@ -407,6 +440,7 @@ export const turkeySGKData = [
     inOF: "15,49 ",
     rca: "320 ",
     AvgUbiq: "27,56",
+    group: "2",
   },
   {
     name: "Gümüşhane",
@@ -419,6 +453,7 @@ export const turkeySGKData = [
     inOF: "15,27 ",
     rca: "249 ",
     AvgUbiq: "30,43 ",
+    group: "2",
   },
   {
     name: "Hakkari",
@@ -431,6 +466,7 @@ export const turkeySGKData = [
     inOF: "14,92 ",
     rca: "166 ",
     AvgUbiq: "27,66 ",
+    group: "2",
   },
   {
     name: "Hatay",
@@ -443,6 +479,7 @@ export const turkeySGKData = [
     inOF: "15,67",
     rca: "387 ",
     AvgUbiq: "22,74",
+    group: "4",
   },
 
   {
@@ -456,6 +493,7 @@ export const turkeySGKData = [
     inOF: "15,69 ",
     rca: "408",
     AvgUbiq: "25,42",
+    group: "1",
   },
   {
     name: "Mersin",
@@ -468,6 +506,7 @@ export const turkeySGKData = [
     inOF: "15,73",
     rca: "424",
     AvgUbiq: "21,29",
+    group: "4",
   },
   {
     name: "Iğdır",
@@ -480,6 +519,7 @@ export const turkeySGKData = [
     inOF: "15,02",
     rca: "190",
     AvgUbiq: "31,57",
+    group: "2",
   },
   {
     name: "İstanbul",
@@ -492,6 +532,7 @@ export const turkeySGKData = [
     inOF: "16,02",
     rca: "994",
     AvgUbiq: "10,73",
+    group: "4",
   },
   {
     name: "İzmir",
@@ -504,6 +545,7 @@ export const turkeySGKData = [
     inOF: "16,17 ",
     rca: "891",
     AvgUbiq: "15,66 ",
+    group: "4",
   },
   {
     name: "Kahramanmaraş",
@@ -516,6 +558,7 @@ export const turkeySGKData = [
     inOF: "15,42 ",
     rca: " 294",
     AvgUbiq: "23,44 ",
+    group: "3",
   },
   {
     name: "Karabük",
@@ -528,6 +571,7 @@ export const turkeySGKData = [
     inOF: "15,40",
     rca: "274",
     AvgUbiq: "26,49",
+    group: "2",
   },
   {
     name: "Karaman",
@@ -540,6 +584,7 @@ export const turkeySGKData = [
     inOF: "15,41 ",
     rca: "274 ",
     AvgUbiq: "25,67 ",
+    group: "2",
   },
   {
     name: "Kars",
@@ -552,6 +597,7 @@ export const turkeySGKData = [
     inOF: "15,19",
     rca: "228",
     AvgUbiq: "29,1",
+    group: "2",
   },
   {
     name: "Kastamonu",
@@ -564,6 +610,7 @@ export const turkeySGKData = [
     inOF: "15,47",
     rca: "311",
     AvgUbiq: "27,82",
+    group: "2",
   },
   {
     name: "Kayseri",
@@ -576,6 +623,7 @@ export const turkeySGKData = [
     inOF: "15,76",
     rca: "427",
     AvgUbiq: "19,49",
+    group: "4",
   },
   {
     name: "Kilis",
@@ -588,6 +636,7 @@ export const turkeySGKData = [
     inOF: "14,92",
     rca: "164",
     AvgUbiq: "28,04",
+    group: "2",
   },
   {
     name: "Kırıkkale",
@@ -600,6 +649,7 @@ export const turkeySGKData = [
     inOF: "15,43",
     rca: "288",
     AvgUbiq: "25,90",
+    group: "2",
   },
   {
     name: "Kırklareli",
@@ -612,6 +662,7 @@ export const turkeySGKData = [
     inOF: "15,51",
     rca: "318",
     AvgUbiq: "24",
+    group: "3",
   },
   {
     name: "Kırşehir",
@@ -624,6 +675,7 @@ export const turkeySGKData = [
     inOF: "15,33",
     rca: "262",
     AvgUbiq: "29,05",
+    group: "2",
   },
   {
     name: "Kocaeli",
@@ -636,6 +688,7 @@ export const turkeySGKData = [
     inOF: "15,88",
     rca: "543",
     AvgUbiq: "13,47",
+    group: "4",
   },
   {
     name: "Konya",
@@ -648,6 +701,7 @@ export const turkeySGKData = [
     inOF: "15,95",
     rca: "546",
     AvgUbiq: "19,82",
+    group: "4",
   },
   {
     name: "Kütahya",
@@ -660,6 +714,7 @@ export const turkeySGKData = [
     inOF: "15,48",
     rca: "322",
     AvgUbiq: "23,76",
+    group: "3",
   },
   {
     name: "Malatya",
@@ -672,6 +727,7 @@ export const turkeySGKData = [
     inOF: "15,56",
     rca: "341",
     AvgUbiq: "24,72",
+    group: "2",
   },
   {
     name: "Manisa",
@@ -684,6 +740,7 @@ export const turkeySGKData = [
     inOF: "15,68",
     rca: "401",
     AvgUbiq: "19,75",
+    group: "4",
   },
   {
     name: "Mardin",
@@ -696,6 +753,7 @@ export const turkeySGKData = [
     inOF: "15,19",
     rca: "226",
     AvgUbiq: "25 ",
+    group: "2",
   },
   {
     name: "Muğla",
@@ -708,6 +766,7 @@ export const turkeySGKData = [
     inOF: "15,78",
     rca: "450",
     AvgUbiq: "22,01",
+    group: "4",
   },
   {
     name: "Muş",
@@ -720,6 +779,7 @@ export const turkeySGKData = [
     inOF: "15,01 ",
     rca: "188 ",
     AvgUbiq: "29,76 ",
+    group: "2",
   },
   {
     name: "Nevşehir",
@@ -732,6 +792,7 @@ export const turkeySGKData = [
     inOF: "15,44",
     rca: "302",
     AvgUbiq: "25,6",
+    group: "2",
   },
   {
     name: "Niğde",
@@ -744,6 +805,7 @@ export const turkeySGKData = [
     inOF: "15,49",
     rca: "315",
     AvgUbiq: "26,78",
+    group: "2",
   },
   {
     name: "Ordu",
@@ -756,6 +818,7 @@ export const turkeySGKData = [
     inOF: "15,57",
     rca: "350",
     AvgUbiq: "27,13",
+    group: "1",
   },
   {
     name: "Osmaniye",
@@ -768,6 +831,7 @@ export const turkeySGKData = [
     inOF: "15,47",
     rca: "306",
     AvgUbiq: "26,36",
+    group: "2",
   },
   {
     name: "Rize",
@@ -780,6 +844,7 @@ export const turkeySGKData = [
     inOF: "15,52",
     rca: "326",
     AvgUbiq: "27,04",
+    group: "2",
   },
   {
     name: "Sakarya",
@@ -792,6 +857,7 @@ export const turkeySGKData = [
     inOF: "15,78",
     rca: "450",
     AvgUbiq: "20,78",
+    group: "4",
   },
   {
     name: "Samsun",
@@ -804,6 +870,7 @@ export const turkeySGKData = [
     inOF: "15,85",
     rca: "501",
     AvgUbiq: "23,04",
+    group: "4",
   },
   {
     name: "Şanliurfa",
@@ -816,6 +883,7 @@ export const turkeySGKData = [
     inOF: "15,29",
     rca: "254",
     AvgUbiq: "24,1",
+    group: "3",
   },
   {
     name: "Siirt",
@@ -828,6 +896,7 @@ export const turkeySGKData = [
     inOF: "15,19",
     rca: "223",
     AvgUbiq: "29,12",
+    group: "2",
   },
   {
     name: "Sinop",
@@ -840,6 +909,7 @@ export const turkeySGKData = [
     inOF: "15,34",
     rca: "266",
     AvgUbiq: "28,2",
+    group: "2",
   },
   {
     name: "Şırnak",
@@ -852,6 +922,7 @@ export const turkeySGKData = [
     inOF: "14,72",
     rca: "139",
     AvgUbiq: "28,52",
+    group: "2",
   },
   {
     name: "Sivas",
@@ -864,6 +935,7 @@ export const turkeySGKData = [
     inOF: "15,59",
     rca: "368",
     AvgUbiq: "26,96",
+    group: "1",
   },
   {
     name: "Tekirdağ",
@@ -876,6 +948,7 @@ export const turkeySGKData = [
     inOF: "15,66 ",
     rca: "385 ",
     AvgUbiq: "14,8 ",
+    group: "4",
   },
   {
     name: "Tokat",
@@ -888,6 +961,7 @@ export const turkeySGKData = [
     inOF: " 15,43",
     rca: "297 ",
     AvgUbiq: "27,63 ",
+    group: "2",
   },
   {
     name: "Trabzon",
@@ -900,6 +974,7 @@ export const turkeySGKData = [
     inOF: "15,78",
     rca: "449",
     AvgUbiq: "24,08",
+    group: "4",
   },
   {
     name: "Tunceli",
@@ -912,6 +987,7 @@ export const turkeySGKData = [
     inOF: "15,04",
     rca: "189",
     AvgUbiq: "30,08",
+    group: "2",
   },
   {
     name: "Uşak",
@@ -924,6 +1000,7 @@ export const turkeySGKData = [
     inOF: "15,45",
     rca: "303 ",
     AvgUbiq: "24,30",
+    group: "3",
   },
   {
     name: "Van",
@@ -936,6 +1013,7 @@ export const turkeySGKData = [
     inOF: "15,24",
     rca: "239",
     AvgUbiq: "28,66",
+    group: "2",
   },
   {
     name: "Yalova",
@@ -948,6 +1026,7 @@ export const turkeySGKData = [
     inOF: "15,29",
     rca: "232",
     AvgUbiq: "20,51",
+    group: "3",
   },
   {
     name: "Yozgat",
@@ -960,6 +1039,7 @@ export const turkeySGKData = [
     inOF: "15,43",
     rca: "306",
     AvgUbiq: "27,85",
+    group: "2",
   },
   {
     name: "zonguldak",
@@ -972,5 +1052,6 @@ export const turkeySGKData = [
     inOF: "15,53",
     rca: "318",
     AvgUbiq: "24,03",
+    group: "3",
   },
 ];

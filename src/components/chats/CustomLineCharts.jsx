@@ -3,13 +3,25 @@ import { useDimensions } from "webrix/hooks";
 import  "./CustomLineChartsSytle.scss"
 import { Stack, Typography ,Divider} from "@mui/material";
 
-const DATA = [
-/*  [100, 540, 900, 600, 700, 400, 800, 2000, 2900, 3200, 2400,3500], */
-[1131, 1604, 1240, 1731, 1304, 2101, 3501]
-];
-
 const COLORS = ["#00baf0", "#5637f4"];
-const LABELS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"];
+const LABELS = ["2004",
+"2005",
+"2006",
+"2007",
+"2008",
+"2009",,
+"2010",
+"2011",
+"2012",
+"2013",
+"2014",
+"2015",
+"2016",
+"2017",
+"2018",
+"2019",
+"2020",
+"2021"];
 
 const Line = ({ path, color }) => {
   const dx = 100 / (path.length - 1);
@@ -76,8 +88,6 @@ const Points = ({ data, width, height, setActive, range }) => {
   );
 };
 
-
-
 const Marker = ({ colors, labels, data, active, width, height, range }) => {
   const { path, point } = active || {};
   const value = data[path]?.[point];
@@ -94,7 +104,7 @@ const Marker = ({ colors, labels, data, active, width, height, range }) => {
     >
       <div className="tooltip">
         <span>{labels[point]}</span>
-        <span>${value?.toLocaleString?.()}</span>
+        <span>{value?.toLocaleString?.()}tl</span>
       </div>
       <div className="line" />
       <div className="circle" />
@@ -103,68 +113,92 @@ const Marker = ({ colors, labels, data, active, width, height, range }) => {
 };
 
 const Graph = ({ data, colors, range, labels }) => {
-  const [active, setActive] = useState({ path: 1, point: 2 });
+  const [active, setActive] = useState({ path: 1 ,path: 2});
   const graph = useRef();
   const { width, height } = useDimensions(graph);
   return (
   <Stack  width={"100%"} alignItems={"center"}> 
     <div className="graph" ref={graph}>
-  {/*     <Marker
-        colors={colors}
-        data={data}
-        active={active}
-        labels={labels}
-        width={width}
-        height={height}
-        range={range}
-         />  */}
-            <svg
-            
+    <Marker
+      colors={colors}
+      data={data}
+      active={active}
+      labels={labels}
+      width={width}
+      height={height}
+      range={range}
+         />  
+          <svg
             style={{transform: "scaleY(-1)" }}
             viewBox={`0 ${range[0]} 100 ${range[1]}`} preserveAspectRatio="none">
               {data.map((path, i) => (
                <Line key={i} path={path} color={colors[i]} />
                 ))}
-            </svg>
-
-      <Points
-          data={data}
-           width={width}
-           height={height}
-           setActive={setActive}
-           range={range}
-          /> 
+          </svg>
+    <Points
+      data={data}
+      width={width}
+      height={height}
+      setActive={setActive}
+      range={range}
+    /> 
     </div>
   </Stack>
   );
 };
 
-const CustomLineCharts = ({ data, colors, range, labels, title, subtitle,value1,value2,value3,valueText1,valueText2,valueText3 }) => (
-  <Stack width={"100%"} alignItems={"center"}> 
-    <Typography variant="caption" >{title}</Typography>
-    <Typography fontWeight={700} variant="h5" >{subtitle}</Typography>
-      <Stack width={"100%"} direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
-        <Typography variant="subtitle2" >{ value1}</Typography>
-        <Typography variant="body1" > {value2} </Typography>
-        <Typography variant="subtitle2" >{value3}</Typography>
-      </Stack>
-  <Stack direction={"row"} width={"100%"}>
-     <Divider orientation="vertical" flexItem/>
-     <Graph
-        data={data}
-        colors={colors}
-        range={range}
-        labels={LABELS}
-     
-      />
-      <Divider width="4px" orientation="vertical" flexItem/>
+const CustomLineCharts = ({
+  data,
+  colors,
+  range,
+  labels,
+  title,
+  subtitle,
+  value1,
+  value2,
+  value3,
+  valueText1,
+  valueText2,
+  valueText3,
+}) => (
+  <Stack width={"100%"} alignItems={"center"}>
+    <Typography align="center" variant="body2" height={"48px"}>
+      {title}
+    </Typography>
+    {/*  <Typography fontWeight={700} variant="h5" >{subtitle}</Typography> */}
+    <Stack
+      width={"100%"}
+      direction={"row"}
+      alignItems={"center"}
+      justifyContent={"space-between"}
+    >
+      <Typography variant="subtitle2">{value1}</Typography>
+      <Typography variant="body1"> {value2} </Typography>
+      <Typography variant="subtitle2">{value3}</Typography>
+    </Stack>
+    <Stack direction={"row"} width={"100%"}>
+      <Divider orientation="vertical" flexItem />
+        <Stack padding={"12px 0px"} width={"100%"}>
+          <Graph data={data} colors={colors} range={range} labels={LABELS} />
+        </Stack> 
+      <Divider width="4px" orientation="vertical" flexItem />
+    </Stack>
+    <Stack
+      width={"100%"}
+      direction={"row"}
+      alignItems={"center"}
+      justifyContent={"space-between"}
+    >
+      <Typography fontWeight={400} variant="subtitle2">
+        {" "}
+        {valueText1}{" "}
+      </Typography>
+      <Typography variant="body1"> {valueText2} </Typography>
+      <Typography fontWeight={400} variant="subtitle2">
+        {" "}
+        {valueText3}{" "}
+      </Typography>
+    </Stack>
   </Stack>
-  <Stack width={"100%"} direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
-      <Typography fontWeight={400} variant="subtitle2" > {valueText1} </Typography>
-      <Typography variant="body1" > {valueText2} </Typography>
-      <Typography fontWeight={400}  variant="subtitle2" > {valueText3} </Typography>
-  </Stack>
- </Stack>
 );
-
 export default CustomLineCharts;

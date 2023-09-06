@@ -6,7 +6,7 @@ import MapEchart from "components/chats/MapEchart";
 const HomePage = () => {
   return (
     <PageContainer>
-      <MapEchart />
+      {/*       <MapEchart /> */}
       <HomeView />
     </PageContainer>
   );

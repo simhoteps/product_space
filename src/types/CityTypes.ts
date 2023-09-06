@@ -5,6 +5,7 @@ export interface IMapTooltip{
     inOF:string,
     rca:string,
     avgUbiq:string,
+    group:string
 }
   
 

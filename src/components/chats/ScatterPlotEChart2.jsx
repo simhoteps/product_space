@@ -5,12 +5,12 @@ import numeral from "numeral";
 
  
 
-const ScatterPlotEChart = () => {
+const ScatterPlotEChart2 = () => {
   const newData = turkeySGKData.map((item) => {
     return {
       city: item.name,
       div: numeral(item.rca.replace(",", ".")).value() ,
-      evDiv: numeral(item.AvgUbiq.replace(",", ".")).value()  ,
+      inOF: numeral(item.inOF.replace(",", ".")).value()  ,
       team:item.group
     };
   });
@@ -25,7 +25,7 @@ const ScatterPlotEChart = () => {
     data,
     sizeField: 'city',
     xField: 'div',
-    yField: 'evDiv',
+    yField: 'inOF',
     colorField: 'team',
     size: 5,
     shape: 'circle',
@@ -75,4 +75,4 @@ const ScatterPlotEChart = () => {
   return <Scatter {...config} />;
 };
 
-export default ScatterPlotEChart
+export default ScatterPlotEChart2

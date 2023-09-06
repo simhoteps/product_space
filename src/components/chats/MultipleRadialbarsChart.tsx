@@ -8,11 +8,11 @@ import Chart from "react-apexcharts";
 const MultipleRadialbarsChart = ({
   labelsName,
   dataTotal,
-  data,
-}: {
+}: /*   data, */
+{
   labelsName: string[];
   dataTotal: string;
-  data: (number | null)[];
+  /*   data: (number | null)[]; */
 }) => {
   return (
     <Stack width={"100%"}>

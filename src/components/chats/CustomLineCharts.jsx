@@ -162,9 +162,12 @@ const CustomLineCharts = ({
   valueText3,
 }) => (
   <Stack width={"100%"} alignItems={"center"}>
-    <Typography align="center" variant="body2" height={"48px"}>
-      {title}
-    </Typography>
+    <Stack height={"48px"} alignItems={"center"} justifyContent={"center"} >
+      <Typography align="center" variant="body2" >
+       {title}
+      </Typography>
+    </Stack>
+
     {/*  <Typography fontWeight={700} variant="h5" >{subtitle}</Typography> */}
     <Stack
       width={"100%"}

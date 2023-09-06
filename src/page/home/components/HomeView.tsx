@@ -5,6 +5,9 @@ import CityDescription from "./CityDescription";
 import TripleChart from "./TripleChart";
 import ScatterPlotEChart from "components/chats/ScatterPlotEChart";
 import ColumnBasicChartEcharts from "components/chats/ColumnBasicChartEcharts";
+import { turkeySGKData } from "../data/NewData";
+import numeral from "numeral";
+import ScatterPlotEChart2 from "components/chats/ScatterPlotEChart2";
 
 const RightCotaniner = styled(Stack)(({ theme }) => ({
   width: "100%",
@@ -28,6 +31,15 @@ const RightCotaniner = styled(Stack)(({ theme }) => ({
 }));
 
 const HomeView = () => {
+  const newData = turkeySGKData.map((item) => {
+    return {
+      city: item.name,
+      div: numeral(item.rca.replace(",", ".")).value(),
+      evDiv: numeral(item.AvgUbiq.replace(",", ".")).value(),
+      team: item.group,
+    };
+  });
+
   return (
     <Stack>
       <Grid spacing={4} container>
@@ -37,7 +49,6 @@ const HomeView = () => {
         <Grid xs={12} md={8} item>
           <RightCotaniner>
             <MapsArr />
-
             <TripleChart />
           </RightCotaniner>
         </Grid>
@@ -45,10 +56,16 @@ const HomeView = () => {
       <Stack marginTop={"48px"} gap={"8px"} width={"100%"}>
         <Divider>
           <Typography variant="subtitle2">
-            Çeşitlilik (Div RCA{">"}1) / Ort Sıradanlık (Avg_Ubiq)
+            Ort Sıradanlık (Avg_Ubiq) - Çeşitlilik (Div RCA{">"}1)
           </Typography>
         </Divider>
         <ScatterPlotEChart />
+        <Divider>
+          <Typography variant="subtitle2">
+            OF - Çeşitlilik (Div RCA{">"}1)
+          </Typography>
+        </Divider>
+        <ScatterPlotEChart2 />
         <Divider>
           <Typography variant="subtitle2">
             Ekonomik Kompleksite (ECI)

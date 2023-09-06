@@ -1,8 +1,8 @@
-import React, { ReactNode, useContext } from "react";
+import React, { useContext } from "react";
 import { Stack, Tooltip, Typography, styled } from "@mui/material";
 import "./maps_style.css";
 import { useNavigate } from "react-router-dom";
-import { IMapData, IMapTooltip } from "types/CityTypes";
+import { IMapTooltip } from "types/CityTypes";
 import { cityContext } from "context/CityProvider";
 import { turkeySGKData } from "page/home/data/NewData";
 
@@ -59,7 +59,6 @@ const CustomTooltip = ({ input }: { input: IMapTooltip }) => (
 );
 
 const MapsArr = () => {
-  const navigate = useNavigate();
   const { citiesValue, setCitiesValue } = useContext(cityContext);
   return (
     <Stack width={"100%"}>
@@ -87,6 +86,7 @@ const MapsArr = () => {
                       inOF: city.inOF,
                       rca: city.rca,
                       avgUbiq: city.AvgUbiq,
+                      group: city.group,
                     }}
                   />
                 }

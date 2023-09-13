@@ -1,30 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Scatter } from "@ant-design/plots";
-import { turkeySGKData } from "page/home/data/NewData";
-import numeral from "numeral";
 import { useTheme } from "layouts/theme/ThemeContext";
 
-const ScatterPlotEChart = () => {
+const ScatterPlotEChart = ({
+  data,
+  xField,
+  yField,
+  sizeField,
+  colorField,
+}: {
+  data: any;
+  xField: string;
+  yField: string;
+  sizeField: string;
+  colorField: string;
+}) => {
   const { theme } = useTheme();
-  const newData = turkeySGKData.map((item) => {
-    return {
-      city: item.name,
-      div: numeral(item.div.replace(",", ".")).value(),
-      evDiv: numeral(item.avgUbiq.replace(",", ".")).value(),
-      team: item.group,
-    };
-  });
-
-  const dataKB = [...newData].sort((a, b) => a.div - b.div);
-  const data = [...dataKB].sort((a, b) => b.AvgUbiq - a.AvgUbiq);
 
   const config = {
     appendPadding: 30,
     data,
-    sizeField: "city",
-    xField: "div",
-    yField: "evDiv",
-    colorField: "team",
+    sizeField: sizeField,
+    xField: xField,
+    yField: yField,
+    colorField: colorField,
     size: 5,
     shape: "circle",
     pointStyle: {
@@ -71,7 +70,7 @@ const ScatterPlotEChart = () => {
         color: theme.palette.primary.dark,
         fill: theme.palette.primary.dark,
       },
-      formatter: (item) => {
+      formatter: (item: any) => {
         return item.city;
       },
     },

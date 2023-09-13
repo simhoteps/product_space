@@ -1,9 +1,10 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react";
 import { Stack } from "@mui/material";
-import { turkeySGKData } from "page/home/data/NewData";
+
 import numeral from "numeral";
 import { useTheme } from "layouts/theme/ThemeContext";
+import { turkeySGKData } from "page/dashboard/data/NewData";
 
 interface Item {
   name: string;

@@ -9,8 +9,8 @@ const ScatterPlotEChart2 = () => {
   const newData = turkeySGKData.map((item) => {
     return {
       city: item.name,
-      div: numeral(item.rca.replace(",", ".")).value() ,
-      inOF: numeral(item.inOF.replace(",", ".")).value()  ,
+      div: numeral(item.div.replace(",", ".")).value() ,
+      inOF: numeral(item.of.replace(",", ".")).value()  ,
       team:item.group
     };
   });

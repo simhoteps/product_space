@@ -1,9 +1,11 @@
 {
   "topbar":{
-    "productSpace":" Ürün uzayı",
+    "productSpace":" Türkiye Ürün Uzayı Atlası",
+    "home":"Anasayfa",
     "explore":"Keşif",
     "data":"Data",
-    "publication":"Duyuru",
+    "dashboard":"Ürün Uzayı",
+    "reports":"Raporlar",
     "about":"Hakkında"
   },
   "navigation":{

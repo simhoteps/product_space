@@ -10,7 +10,7 @@ export const turkeyMockData = {
       value: 2,
     },
     {
-      name: "Afyonkarahisar",
+      name: "Afyon",
       value: 3,
     },
     {
@@ -66,7 +66,7 @@ export const turkeyMockData = {
       value: 11,
     },
     {
-      name: "Bingol",
+      name: "Bingöl",
       value: 12,
     },
     {
@@ -273,7 +273,7 @@ export const turkeyMockData = {
       value: 55,
     },
     {
-      name: "Şanliurfa",
+      name: "Şanlıurfa",
       value: 63,
     },
     {
@@ -325,7 +325,7 @@ export const turkeyMockData = {
       value: 66,
     },
     {
-      name: "zonguldak",
+      name: "Zonguldak",
       value: 67,
     },
   ],

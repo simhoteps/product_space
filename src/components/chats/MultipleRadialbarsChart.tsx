@@ -1,8 +1,5 @@
-import { Stack } from "@mui/material";
-import { cityContext } from "context/CityProvider";
-import numeral from "numeral";
-import { turkeySGKData } from "page/home/data/NewData";
 import React, { useContext, useState } from "react";
+import { Stack } from "@mui/material";
 import Chart from "react-apexcharts";
 
 const MultipleRadialbarsChart = ({

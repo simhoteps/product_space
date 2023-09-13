@@ -29,13 +29,16 @@ const Content = styled(Box)<BoxProps>(({ theme }) => ({
   },
 }));
 
-const SubCotaniner = styled(Box)(({ theme }) => ({
-  height: "100%",
-  width: "100%",
-  padding: "8px",
-  borderRadius: "16px",
-  backgroundColor: theme.palette.background.paper,
-}));
+const SubCotaniner = styled(Box)<{ customC?: string; bgImg?: string }>(
+  ({ theme, customC, bgImg }) => ({
+    height: "100%",
+    width: "100%",
+    padding: "8px",
+    borderRadius: "16px",
+    backgroundImage: bgImg ? `url(${bgImg})` : "none",
+    backgroundColor: customC ? customC : theme.palette.background.paper,
+  })
+);
 
 const Cotaniner = styled(Box)<{ windowsize: Size }>(
   ({ theme, windowsize }) => ({
@@ -48,12 +51,20 @@ const Cotaniner = styled(Box)<{ windowsize: Size }>(
   })
 );
 
-const PageContainer = (props: BoxProps) => {
+const PageContainer = ({
+  bgcolor,
+  children,
+  bgImg,
+}: {
+  bgcolor?: string;
+  bgImg?: string;
+  children: React.ReactNode;
+}) => {
   const windowsize: Size = useWindowSize();
   return (
     <Cotaniner windowsize={windowsize}>
-      <SubCotaniner>
-        <Content>{props.children}</Content>
+      <SubCotaniner bgImg={bgImg} customC={bgcolor}>
+        <Content>{children}</Content>
       </SubCotaniner>
     </Cotaniner>
   );

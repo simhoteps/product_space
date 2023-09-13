@@ -14,6 +14,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { useTheme } from "layouts/theme/ThemeContext";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router-dom";
 
 const CustomButton = styled(Button)(({ theme }) => ({
   display: "flex",
@@ -37,12 +38,44 @@ const RowBox = styled(Stack)(({ theme }) => ({
 
 export const HeaderNav = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <RowBox sx={{ display: { xs: "none ", sm: "none", md: "flex" } }}>
-      <CustomButton> {t("topbar.explore")}</CustomButton>
-      <CustomButton> {t("topbar.data")}</CustomButton>
-      <CustomButton> {t("topbar.publication")}</CustomButton>
-      <CustomButton> {t("topbar.about")}</CustomButton>
+      <CustomButton
+        onClick={() => {
+          navigate(`/home`);
+        }}
+      >
+        {t("topbar.home")}
+      </CustomButton>
+      <CustomButton
+        onClick={() => {
+          navigate(`/dashboard`);
+        }}
+      >
+        {t("topbar.dashboard")}
+      </CustomButton>
+      <CustomButton
+        onClick={() => {
+          navigate(`/data`);
+        }}
+      >
+        {t("topbar.data")}
+      </CustomButton>
+      <CustomButton
+        onClick={() => {
+          navigate(`/reports`);
+        }}
+      >
+        {t("topbar.reports")}
+      </CustomButton>
+      <CustomButton
+        onClick={() => {
+          navigate(`/about`);
+        }}
+      >
+        {t("topbar.about")}
+      </CustomButton>
     </RowBox>
   );
 };
@@ -50,6 +83,7 @@ export const HeaderNav = () => {
 export const HeaderNavMobile = () => {
   const { theme } = useTheme();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -121,20 +155,44 @@ export const HeaderNavMobile = () => {
           </Stack>
 
           <Divider sx={{ marginTop: "10px", marginBottom: "10px" }} />
-
-          <MenuItem onClick={handleClose}>
-            <Typography variant="caption"> {t("topbar.explore")}</Typography>
+          <MenuItem
+            onClick={() => {
+              navigate(`/home`);
+              handleClose();
+            }}
+          >
+            <Typography variant="caption"> {t("topbar.home")}</Typography>
           </MenuItem>
-          <MenuItem onClick={handleClose}>
+          <MenuItem
+            onClick={() => {
+              navigate(`/dashboard`);
+              handleClose();
+            }}
+          >
+            <Typography variant="caption"> {t("topbar.dashboard")}</Typography>
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              navigate(`/data`);
+              handleClose();
+            }}
+          >
             <Typography variant="caption"> {t("topbar.data")}</Typography>
           </MenuItem>
-          <MenuItem onClick={handleClose}>
-            <Typography variant="caption">
-              {" "}
-              {t("topbar.publication")}
-            </Typography>
+          <MenuItem
+            onClick={() => {
+              navigate(`/reports`);
+              handleClose();
+            }}
+          >
+            <Typography variant="caption">{t("topbar.reports")}</Typography>
           </MenuItem>
-          <MenuItem onClick={handleClose}>
+          <MenuItem
+            onClick={() => {
+              navigate(`/about`);
+              handleClose();
+            }}
+          >
             <Typography variant="caption"> {t("topbar.about")}</Typography>
           </MenuItem>
         </Stack>

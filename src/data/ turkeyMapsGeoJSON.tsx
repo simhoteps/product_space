@@ -319,7 +319,7 @@ export const turkeyAllGeo = {
           ],
         ],
       },
-      properties: { name: "Afyon", number: 3 },
+      properties: { name: "Afyonkarahisar", number: 3 },
       type: "Feature",
     },
     {

@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 import MiserablesEcharts from "components/chats/MiserablesEcharts";
 import { SectionDashButtons } from "../SectionButtons";
 import { cityContext } from "context/CityProvider";
-import { turkeySGKData } from "page/home/data/NewData";
+import { turkeySGKData } from "page/dashboard/data/NewData";
 
 const TitleText = styled(Typography)(({ theme }) => ({
   ...theme.typography.h5,
@@ -78,11 +78,10 @@ const CityInfo = () => {
             <Stack direction={"row"} width={"100%"}>
               <BackButton
                 onClick={() => {
-                  navigate("/home");
+                  navigate("/dashboard");
                 }}
               >
                 <ArrowBackIcon />
-                {/*   <BackText>{t("navigation.back")}</BackText> */}
               </BackButton>
               <TitleText align="center">{selected?.name}</TitleText>
             </Stack>

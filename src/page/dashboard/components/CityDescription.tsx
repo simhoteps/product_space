@@ -9,6 +9,8 @@ import { CustomStyleButton } from "components/buttons/CustomButton";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { cityContext } from "context/CityProvider";
+import { useStores } from "utils/hooks/use_store";
+import { observer } from "mobx-react";
 
 const TextBorder = styled(Box)<{ windowsize: Size }>(
   ({ theme, windowsize }) => ({
@@ -45,6 +47,8 @@ const CityDescription = () => {
   const windowsize: Size = useWindowSize();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const { mainStore } = useStores();
+
   const { citiesValue, setFilter, setSubFilter } =
     React.useContext(cityContext);
 
@@ -96,7 +100,7 @@ const CityDescription = () => {
         onClick={() => {
           setFilter("economicStructure");
           setSubFilter("exportBasket");
-          navigate(`/home/map/${citiesValue?.city}`);
+          navigate(`/dashboard/map/${mainStore.selectCitiesValue?.city}`);
         }}
       >
         {t("buttons.searchForDetails")}
@@ -107,4 +111,4 @@ const CityDescription = () => {
   );
 };
 
-export default CityDescription;
+export default observer(CityDescription);

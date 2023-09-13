@@ -1,9 +1,11 @@
 {
   "topbar":{
     "productSpace":" Product Space",
+    "home":"Home",
     "explore":"Explore",
     "data":"Data",
-    "publication":"Publication",
+    "dashboard":"Dashboard",
+    "reports":"Reports",
     "about":"About"
   },
   "navigation":{

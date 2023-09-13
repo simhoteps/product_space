@@ -1,7 +1,7 @@
 import Racat, { createContext, ReactNode, useState } from "react";
 import { ICityContext } from "./TypeContext";
 import { IMapData } from "types/CityTypes";
-import { turkeySGKData } from "page/home/data/NewData";
+import { turkeySGKData } from "page/dashboard/data/NewData";
 
 interface CityProviderProps {
   children: ReactNode;

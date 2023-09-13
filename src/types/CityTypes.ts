@@ -2,8 +2,8 @@ export interface IMapTooltip{
     title: string;
     tuik: string,
     eci: string,
-    inOF:string,
-    rca:string,
+    of:string,
+    div:string,
     avgUbiq:string,
     group:string
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import PageContainer from "components/box/PageContainer";
+import { IconKalkinmaAjansiFull } from "components/icons/AjansIcon";
+import { Stack, Typography } from "@mui/material";
 import HomeView from "./components/HomeView";
-import MapEchart from "components/chats/MapEchart";
 
 const HomePage = () => {
   return (
-    <PageContainer>
-      {/*       <MapEchart /> */}
+    <PageContainer bgcolor="none">
       <HomeView />
     </PageContainer>
   );

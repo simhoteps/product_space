@@ -1,15 +1,16 @@
-import React, { useContext, useState, useEffect } from "react";
-import { cityContext } from "context/CityProvider";
+import React, { useState, useEffect } from "react";
 import { KBGSYIHData } from "../data/KBGSYIHData";
 import { useTheme } from "layouts/theme/ThemeContext";
 import { Stack, Typography } from "@mui/material";
 import CustomLineCharts from "components/chats/CustomLineCharts";
-import { turkeySGKData } from "../data/NewData";
-import numeral from "numeral";
+
+import { useStores } from "utils/hooks/use_store";
+import { observer } from "mobx-react";
 
 const TripleChart = () => {
   const { theme } = useTheme();
-  const { citiesValue } = useContext(cityContext);
+  const { mainStore } = useStores();
+  const citiesValue = mainStore.selectCitiesValue;
 
   const CityDataChart = KBGSYIHData.find(
     (option) => option.plateCode === citiesValue?.plateCode
@@ -24,26 +25,6 @@ const TripleChart = () => {
   ).findIndex((item) => item.plateCode === citiesValue?.plateCode);
   const TurkeyDataChart = KBGSYIHData[0];
 
-  /* 
-  const SelectCityDataChart = turkeySGKData.find(
-    (option) => option.plateCode === citiesValue?.plateCode
-  );
- const multipleRadialLabelsName = [
-    "KBGSYIH2021 (TÜİK-TL)",
-    "Ekonomik Kompleksite (ECI)",
-    "Açık Orman (lnOF)",
-    "Çeşitlilik (Div RCA>1)",
-    "Ort Sıradanlık (Avg_Ubiq)",
-  ];
-
-  const multipleRadialData = [
-    numeral(SelectCityDataChart?.tuik.replace(",", ".")).value(),
-    numeral(SelectCityDataChart?.eci.replace(",", ".")).value(),
-    numeral(SelectCityDataChart?.inOF.replace(",", ".")).value(),
-    numeral(SelectCityDataChart?.rca.replace(",", ".")).value(),
-    numeral(SelectCityDataChart?.AvgUbiq.replace(",", ".")).value(),
-  ];
- */
   const firstCityData = CityDataChart?.data[0].toFixed(2);
   const lastCityData = CityDataChart?.data[17].toFixed(2);
   const [calc, setCalc] = useState<number | undefined>(undefined);
@@ -86,7 +67,7 @@ const TripleChart = () => {
         colors={["#6BB27B"]}
         range={[3000, 160000]}
         labels={""}
-        title={"İl Bazında KBGSYH"}
+        title={`${mainStore.selectCitiesValue?.name} Bazında KBGSYH `}
         subtitle={"14th of 81"}
         value1={`Sırası:${firstDataSort + 1}`}
         value2={""}
@@ -110,20 +91,8 @@ const TripleChart = () => {
           <Typography variant="body1">{lastDataSort + 1}</Typography>
         </Stack>
       </Stack>
-
-      {/*     <MultipleRadialbarsChart
-        labelsName={multipleRadialLabelsName}
-        dataTotal={"400"}
-            data={multipleRadialData} 
-      /> */}
-
-      {/* <CustomAngleCircleChart
-        labelsName={multipleRadialLabelsName}
-        circleColors={["#ACCAF2", "#607EA6", "#204473", "#D0ECF2", "#7E8C69"]}
-        data={[23, 879, 879, 9, 9]}
-      /> */}
     </Stack>
   );
 };
 
-export default TripleChart;
+export default observer(TripleChart);

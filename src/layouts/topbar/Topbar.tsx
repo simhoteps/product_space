@@ -10,24 +10,12 @@ import {
   useTheme,
 } from "@mui/material";
 import ThemeSwitcher from "layouts/theme/themeSwitcher";
-import AccountSettings from "./components/AccountSettings";
-import NotificationsMenu from "./components/Notifications";
 import { useStores } from "utils/hooks/use_store";
 import LanguageSwitcher from "layouts/lang/language_switcher";
 import { HeaderNav, HeaderNavMobile } from "./components/HeaderNav";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-/* const AppBarCustom = styled(AppBar)(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
-  color: theme.palette.text.secondary,
-  boxShadow: `${theme.palette.background.default} 0px 10px 10px -10px`,
-  display: "flex",
-  justifyItems: "center",
-  height: "64px",
-  zIndex: 1500,
-}));
- */
 const ToolbarCustom = styled(Toolbar)(({ theme }) => ({
   height: "64px",
   minHeight: "64px",
@@ -100,8 +88,8 @@ const Topbar = () => {
             <HeaderNavMobile />
             <LanguageSwitcher />
             <ThemeSwitcher />
-            <NotificationsMenu />
-            <AccountSettings />
+            {/*      <NotificationsMenu />
+            <AccountSettings /> */}
           </RowBox>
         )}
       </ResponsiveBox>

@@ -9,7 +9,7 @@ const LABELS = ["2004",
 "2006",
 "2007",
 "2008",
-"2009",,
+"2009",
 "2010",
 "2011",
 "2012",
@@ -113,7 +113,7 @@ const Marker = ({ colors, labels, data, active, width, height, range }) => {
 };
 
 const Graph = ({ data, colors, range, labels }) => {
-  const [active, setActive] = useState({ path: 1 ,path: 2});
+  const [active, setActive] = useState(null);
   const graph = useRef();
   const { width, height } = useDimensions(graph);
   return (
@@ -184,7 +184,7 @@ const CustomLineCharts = ({
         <Stack padding={"12px 0px"} width={"100%"}>
           <Graph data={data} colors={colors} range={range} labels={LABELS} />
         </Stack> 
-      <Divider width="4px" orientation="vertical" flexItem />
+      <Divider  orientation="vertical" flexItem />
     </Stack>
     <Stack
       width={"100%"}
@@ -193,13 +193,11 @@ const CustomLineCharts = ({
       justifyContent={"space-between"}
     >
       <Typography fontWeight={400} variant="subtitle2">
-        {" "}
-        {valueText1}{" "}
+        {valueText1}
       </Typography>
       <Typography variant="body1"> {valueText2} </Typography>
       <Typography fontWeight={400} variant="subtitle2">
-        {" "}
-        {valueText3}{" "}
+        {valueText3}
       </Typography>
     </Stack>
   </Stack>

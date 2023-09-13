@@ -18,6 +18,8 @@ import {
 import { useTheme } from "layouts/theme/ThemeContext";
 import { cityContext } from "context/CityProvider";
 import { useNavigate } from "react-router-dom";
+import { observer } from "mobx-react";
+import { useStores } from "utils/hooks/use_store";
 
 const SubButton = styled(Button)<{ isSelect: boolean }>(
   ({ theme, isSelect }) => ({
@@ -111,11 +113,11 @@ const buttonArr = [
   },
 ];
 
-export const SectionButtons = () => {
+export const SectionButtons = observer(() => {
   const navigate = useNavigate();
+  const { mainStore } = useStores();
   const { t } = useTranslation();
-  const { citiesValue, openFilter, setFilter, openSubFilter, setSubFilter } =
-    useContext(cityContext);
+  const { citiesValue, setFilter, setSubFilter } = useContext(cityContext);
   return (
     <Stack gap={"16px"} width={"100%"}>
       <Stack gap={"16px"} width={"100%"}>
@@ -133,7 +135,9 @@ export const SectionButtons = () => {
                 icon={item.icon}
                 /*    isSelect={openFilter === item.name} */
                 onClick={() => {
-                  navigate(`/home/map/${citiesValue?.city}`);
+                  navigate(
+                    `/dashboard/map/${mainStore.selectCitiesValue?.city}`
+                  );
                   setFilter(item.name);
                   setSubFilter(item.subButton[0]);
                 }}
@@ -144,7 +148,7 @@ export const SectionButtons = () => {
       </Stack>
     </Stack>
   );
-};
+});
 
 export const SectionDashButtons = () => {
   const { t } = useTranslation();

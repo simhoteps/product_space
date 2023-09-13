@@ -6,19 +6,22 @@ import { IMapData } from "types/CityTypes";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { turkeySGKData } from "../data/NewData";
+import { useStores } from "utils/hooks/use_store";
+import { observer } from "mobx-react";
 
-const CityAutocomplete = (/* { navigateFn }: { navigateFn: () => void } */) => {
-  const navigate = useNavigate();
+const CityAutocomplete = () => {
   const { t } = useTranslation();
+  const { mainStore } = useStores();
   const { citiesValue, setCitiesValue, inputValue, setInputValue } =
     useContext(cityContext);
+
   return (
     <Stack width={"100%"}>
       {" "}
       <Autocomplete
         id="turkey_city_autocomplete"
         options={turkeySGKData}
-        value={citiesValue}
+        value={mainStore.selectCitiesValue}
         autoHighlight
         inputValue={inputValue}
         onInputChange={(event, newInputValue) => {
@@ -26,7 +29,8 @@ const CityAutocomplete = (/* { navigateFn }: { navigateFn: () => void } */) => {
         }}
         onChange={(event: any, newValue: IMapData | null) => {
           setCitiesValue(newValue);
-          /*    navigate(`/home/map/${newValue?.city}`); */
+          mainStore.setSelectCitiesValue(newValue);
+          /*    navigate(`/dashboard/map/${newValue?.city}`); */
         }}
         getOptionLabel={(option) => option.name}
         renderOption={(props, option) => (
@@ -55,4 +59,4 @@ const CityAutocomplete = (/* { navigateFn }: { navigateFn: () => void } */) => {
   );
 };
 
-export default CityAutocomplete;
+export default observer(CityAutocomplete);

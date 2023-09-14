@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { useDimensions } from "webrix/hooks";
 import  "./CustomLineChartsSytle.scss"
 import { Stack, Typography ,Divider} from "@mui/material";
+import { useTheme } from "layouts/theme/ThemeContext";
 
 const COLORS = ["#00baf0", "#5637f4"];
 const LABELS = ["2004",
@@ -89,6 +90,8 @@ const Points = ({ data, width, height, setActive, range }) => {
 };
 
 const Marker = ({ colors, labels, data, active, width, height, range }) => {
+  const { theme } = useTheme();
+
   const { path, point } = active || {};
   const value = data[path]?.[point];
   const dr = Math.abs(range[1] - range[0]);
@@ -102,9 +105,9 @@ const Marker = ({ colors, labels, data, active, width, height, range }) => {
         "--y": `${height - value * (height / dr)}px`,
       }}
     >
-      <div className="tooltip">
+      <div direction={"row"}  className="tooltip">
         <span>{labels[point]}</span>
-        <span>{value?.toLocaleString?.()}tl</span>
+        <span style={{color:  "#424242",}} >{value?.toLocaleString?.()}tl</span>
       </div>
       <div className="line" />
       <div className="circle" />

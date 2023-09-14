@@ -28,7 +28,7 @@ $breakpoints: (
 
   div {
     margin: 1rem;
-    color: #b7bbc8;
+    /*    color: #b7bbc8; */
 
     @include media("sm") {
       font-size: 0.8rem;

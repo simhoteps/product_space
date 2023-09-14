@@ -1,8 +1,29 @@
 import { createTheme } from "@mui/material/styles";
+declare module "@mui/material/styles" {
+  interface Theme {
+    logo: {
+      trakya: string;
+      mersin: string;
+    };
+  }
+  interface ThemeOptions {
+    logo: {
+      trakya?: string;
+      mersin?: string;
+    };
+  }
+
+
+}
 
 const lightTheme = createTheme({
+  logo: {
+    trakya:"#002B55",
+    mersin:  "#1F2855",
+  },
   palette: {
     mode: "light",
+   
     primary: {
       light: "#EEEEEE",
       main: "#B3B3B3",

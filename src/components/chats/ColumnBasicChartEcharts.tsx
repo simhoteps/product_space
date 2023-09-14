@@ -47,10 +47,18 @@ const ColumnBasicChartEcharts = () => {
           xAxis: {
             type: "category",
             data: CityName,
-            axisLabel: { interval: 0, rotate: 90, fontSize: "9px" },
+            axisLabel: {
+              interval: 0,
+              rotate: 90,
+              fontSize: "9px",
+              color: theme.palette.primary.dark,
+            },
           },
           yAxis: {
             type: "value",
+            axisLabel: {
+              color: theme.palette.primary.dark,
+            },
             axisTick: {
               show: false,
             },

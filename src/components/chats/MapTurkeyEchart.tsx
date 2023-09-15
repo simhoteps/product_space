@@ -39,11 +39,13 @@ function MapTurkeyEchart({
     name: item.name,
     value: numeral(item.value?.replace(",", ".")).value(),
     itemStyle: mainStore.selectCitiesValue?.name === item.name && {
-      color: "#FFE458",
+      /*   color: "#FFE458", */
+      borderWidth: 4,
     },
     label: mainStore.selectCitiesValue?.name === item.name && {
       show: true,
       fontWeight: 700,
+      /*       color: theme.palette.primary.dark, */
     },
   }));
 

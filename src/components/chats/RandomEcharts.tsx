@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Stack } from "@mui/material";
 import ReactEcharts from "echarts-for-react";
-import axios from "axios";
 
 interface Igraph {
   nodes: {

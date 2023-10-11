@@ -107,7 +107,7 @@ const Marker = ({ colors, labels, data, active, width, height, range }) => {
     >
       <div direction={"row"}  className="tooltip">
         <span>{labels[point]}</span>
-        <span style={{color:  "#424242",}} >{value?.toLocaleString?.()}tl</span>
+        <span style={{color:  "#424242",}} >{value?.toLocaleString?.()}$</span>
       </div>
       <div className="line" />
       <div className="circle" />

@@ -82,7 +82,12 @@ const buttonArr = [
   {
     name: "economicStructure",
     icon: <IconEconomicStructure sx={{ width: "42px", height: "42px" }} />,
-    subButton: ["Introduction", "exportBasket", "exportComplexity"],
+    subButton: [
+      "Introduction",
+      "EconomicComplexity",
+      "exportBasket",
+      "exportComplexity",
+    ],
   },
   {
     name: "marketDynamics",

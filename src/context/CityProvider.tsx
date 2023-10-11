@@ -15,7 +15,7 @@ export function CityProvider({ children }: CityProviderProps) {
   );
   const [inputValue, setInputValue] = useState("");
   const [openFilter, setFilter] = useState<string>("economicStructure");
-  const [openSubFilter, setSubFilter] = useState<string>("exportBasket");
+  const [openSubFilter, setSubFilter] = useState<string>("Introduction");
 
   return (
     <cityContext.Provider

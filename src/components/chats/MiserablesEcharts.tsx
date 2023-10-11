@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Stack } from "@mui/material";
 import ReactEcharts from "echarts-for-react";
-import axios from "axios";
 import { Size, useWindowSize } from "utils/hooks/use_window_size";
 
 interface Igraph {

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Stack, Grid, styled, Divider, Typography } from "@mui/material";
 import CityDescription from "./CityDescription";
 import TripleChart from "./TripleChart";
@@ -30,8 +30,87 @@ const RightCotaniner = styled(Stack)(({ theme }) => ({
   },
 }));
 
+interface ICos {
+  AD: string;
+  PLAKA: string;
+  Ç: number;
+  OS: number;
+  group: string;
+}
+
+interface ICosType {
+  city: string;
+  çeşitlilik: number;
+  "Ortalama sıradanlık": number;
+  team: string;
+}
+
+interface ISpos {
+  AD: string;
+  PLAKA: string;
+  SP: number;
+  OS: number;
+  group: string;
+}
+
+interface ISposType {
+  city: string;
+  sp: number;
+  "Ortalama sıradanlık": number;
+  team: string;
+}
+
 const DashboardView = () => {
-  const newData = turkeySGKData.map((item) => {
+  const [cosData, setCosData] = useState<ICosType[]>([]);
+  const [sposData, setSposData] = useState<ISposType[]>([]);
+
+  const getCosData = async () => {
+    try {
+      await fetch("/data/grafik_C_OS.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const newData = data.map((item: ICos) => {
+            return {
+              city: item.AD,
+              çeşitlilik: item.Ç,
+              "Ortalama sıradanlık": item.OS,
+              team: item.group,
+            };
+          });
+          setCosData(newData);
+        })
+        .catch((error) => console.error("Veri okuma hatası:", error));
+    } catch (error) {
+      console.error("API çağrısı sırasında hata oluştu:", error);
+    }
+  };
+  const getSposData = async () => {
+    try {
+      await fetch("/data/grafik_SP_OS.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const newData = data.map((item: ISpos) => {
+            return {
+              city: item.AD,
+              "Ortalama sıradanlık": item.OS,
+              sp: item.SP,
+              team: item.group,
+            };
+          });
+          setSposData(newData);
+        })
+        .catch((error) => console.error("Veri okuma hatası:", error));
+    } catch (error) {
+      console.error("API çağrısı sırasında hata oluştu:", error);
+    }
+  };
+
+  useEffect(() => {
+    getCosData();
+    getSposData();
+  }, []);
+
+  /*  const newData = turkeySGKData.map((item) => {
     return {
       city: item.name,
       div: numeral(item.div.replace(",", ".")).value(),
@@ -45,8 +124,8 @@ const DashboardView = () => {
   const scatter1dData = [...dataKB1].sort((a, b) =>
     a.evDiv ? (b.evDiv ? a?.evDiv - b?.evDiv : 0) : 0
   );
-
-  const newData2 = turkeySGKData.map((item) => {
+ */
+  /*   const newData2 = turkeySGKData.map((item) => {
     return {
       city: item.name,
       div: numeral(item.div.replace(",", ".")).value(),
@@ -59,7 +138,7 @@ const DashboardView = () => {
   );
   const scatter2dData = [...dataKB2].sort((a, b) =>
     b.inOF ? (a.inOF ? b?.inOF - a?.inOF : 0) : 0
-  );
+  ); */
 
   return (
     <Stack>
@@ -77,29 +156,31 @@ const DashboardView = () => {
       <Stack marginTop={"48px"} gap={"8px"} width={"100%"}>
         <Divider>
           <Typography variant="subtitle2">
-            Ort Sıradanlık (Avg_Ubiq) - Çeşitlilik (Div RCA{">"}1)
+            Ortalama Sıradanlık (OS)-Çeşitlilik (Ç)
           </Typography>
         </Divider>
-        <ScatterPlotEChart
-          sizeField={"city"}
-          xField={"div"}
-          yField={"evDiv"}
-          colorField={"team"}
-          data={scatter1dData}
-        />
-        {scatter2dData && (
+        {cosData.length > 1 && (
+          <ScatterPlotEChart
+            sizeField={"city"}
+            xField={"çeşitlilik"}
+            yField={"Ortalama sıradanlık"}
+            colorField={"team"}
+            data={cosData}
+          />
+        )}
+        {sposData.length > 1 && (
           <>
             <Divider>
               <Typography variant="subtitle2">
-                OF - Çeşitlilik (Div RCA{">"}1)
+                Sıçrama Potansiyeli (SP)-Ortalama Sıradanlık (SP)
               </Typography>
             </Divider>
             <ScatterPlotEChart
               sizeField={"city"}
-              xField={"div"}
-              yField={"inOF"}
+              xField={"Ortalama sıradanlık"}
+              yField={"sp"}
               colorField={"team"}
-              data={scatter2dData}
+              data={sposData}
             />
           </>
         )}

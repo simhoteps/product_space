@@ -99,7 +99,7 @@ const CityDescription = () => {
       <CustomStyleButton
         onClick={() => {
           setFilter("economicStructure");
-          setSubFilter("exportBasket");
+          setSubFilter("Introduction");
           navigate(`/dashboard/map/${mainStore.selectCitiesValue?.city}`);
         }}
       >

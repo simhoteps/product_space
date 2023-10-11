@@ -1,0 +1,572 @@
+[
+    {
+        "AD": "ADANA",
+        "PLAKA": "TR-01",
+        "Ç": 604.0,
+        "OS": 19.39,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "ADIYAMAN",
+        "PLAKA": "TR-02",
+        "Ç": 224.0,
+        "OS": 27.75,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "AFYONKARAHİSAR",
+        "PLAKA": "TR-03",
+        "Ç": 370.0,
+        "OS": 25.52,
+        "group": "YÇ-YOS"
+    },
+    {
+        "AD": "AĞRI",
+        "PLAKA": "TR-04",
+        "Ç": 171.0,
+        "OS": 29.64,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "AMASYA",
+        "PLAKA": "TR-05",
+        "Ç": 352.0,
+        "OS": 26.41,
+        "group": "YÇ-YOS"
+    },
+    {
+        "AD": "ANKARA",
+        "PLAKA": "TR-06",
+        "Ç": 754.0,
+        "OS": 14.99,
+        "group": "YÇ-DOS" 
+    },
+    {
+        "AD": "ANTALYA",
+        "PLAKA": "TR-07",
+        "Ç": 523.0,
+        "OS": 18.55,
+        "group": "YÇ-DOS"  
+    },
+    {
+        "AD": "ARTVİN",
+        "PLAKA": "TR-08",
+        "Ç": 243.0,
+        "OS": 29.65,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "AYDIN",
+        "PLAKA": "TR-09",
+        "Ç": 498.0,
+        "OS": 23.46,
+        "group": "YÇ-DOS"  
+    },
+    {
+        "AD": "BALIKESİR",
+        "PLAKA": "TR-10",
+        "Ç": 511.0,
+        "OS": 22.08,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "BİLECİK",
+        "PLAKA": "TR-11",
+        "Ç": 236.0,
+        "OS": 22.92,
+       "group": "DÇ-DOS"
+    },
+    {
+        "AD": "BİNGÖL",
+        "PLAKA": "TR-12",
+        "Ç": 219.0,
+        "OS": 29.37,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "BİTLİS",
+        "PLAKA": "TR-13",
+        "Ç": 177.0,
+        "OS": 29.65,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "BOLU",
+        "PLAKA": "TR-14",
+        "Ç": 274.0,
+        "OS": 24.08,
+       "group": "DÇ-DOS"
+    },
+    {
+        "AD": "BURDUR",
+        "PLAKA": "TR-15",
+        "Ç": 309.0,
+        "OS": 28.02,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "BURSA",
+        "PLAKA": "TR-16",
+        "Ç": 536.0,
+        "OS": 14.99,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "ÇANAKKALE",
+        "PLAKA": "TR-17",
+        "Ç": 403.0,
+        "OS": 24.64,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "ÇANKIRI",
+        "PLAKA": "TR-18",
+        "Ç": 191.0,
+        "OS": 27.81,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "ÇORUM",
+        "PLAKA": "TR-19",
+        "Ç": 363.0,
+        "OS": 25.57,
+        "group": "YÇ-YOS"
+    },
+    {
+        "AD": "DENİZLİ",
+        "PLAKA": "TR-20",
+        "Ç": 480.0,
+        "OS": 19.33,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "DİYARBAKIR",
+        "PLAKA": "TR-21",
+        "Ç": 326.0,
+        "OS": 22.91,
+       "group": "DÇ-DOS"
+    },
+    {
+        "AD": "EDİRNE",
+        "PLAKA": "TR-22",
+        "Ç": 356.0,
+        "OS": 26.04,
+        "group": "YÇ-YOS"
+    },
+    {
+        "AD": "ELAZIĞ",
+        "PLAKA": "TR-23",
+        "Ç": 355.0,
+        "OS": 25.48,
+        "group": "YÇ-YOS"
+    },
+    {
+        "AD": "ERZİNCAN",
+        "PLAKA": "TR-24",
+        "Ç": 271.0,
+        "OS": 28.17,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "ERZURUM",
+        "PLAKA": "TR-25",
+        "Ç": 303.0,
+        "OS": 26.16,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "ESKİŞEHİR",
+        "PLAKA": "TR-26",
+        "Ç": 383.0,
+        "OS": 18.96,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "GAZİANTEP",
+        "PLAKA": "TR-27",
+        "Ç": 397.0,
+        "OS": 17.38,
+        "group": "YÇ-DOS" 
+    },
+    {
+        "AD": "GİRESUN",
+        "PLAKA": "TR-28",
+        "Ç": 321.0,
+        "OS": 27.55,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "GÜMÜŞHANE",
+        "PLAKA": "TR-29",
+        "Ç": 249.0,
+        "OS": 30.43,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "HAKKARİ",
+        "PLAKA": "TR-30",
+        "Ç": 167.0,
+        "OS": 27.59,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "HATAY",
+        "PLAKA": "TR-31",
+        "Ç": 387.0,
+        "OS": 22.75,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "ISPARTA",
+        "PLAKA": "TR-32",
+        "Ç": 409.0,
+        "OS": 25.42,
+        "group": "YÇ-YOS"
+    },
+    {
+        "AD": "MERSİN",
+        "PLAKA": "TR-33",
+        "Ç": 425.0,
+        "OS": 21.27,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "İSTANBUL",
+        "PLAKA": "TR-34",
+        "Ç": 998.0,
+        "OS": 10.74,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "İZMİR",
+        "PLAKA": "TR-35",
+        "Ç": 892.0,
+        "OS": 15.66,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "KARS",
+        "PLAKA": "TR-36",
+        "Ç": 229.0,
+        "OS": 29.04,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "KASTAMONU",
+        "PLAKA": "TR-37",
+        "Ç": 311.0,
+        "OS": 27.82,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "KAYSERİ",
+        "PLAKA": "TR-38",
+        "Ç": 429.0,
+        "OS": 19.49,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "KIRKLARELİ",
+        "PLAKA": "TR-39",
+        "Ç": 319.0,
+        "OS": 23.96,
+       "group": "DÇ-DOS"
+    },
+    {
+        "AD": "KIRŞEHİR",
+        "PLAKA": "TR-40",
+        "Ç": 262.0,
+        "OS": 29.06,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "KOCAELİ",
+        "PLAKA": "TR-41",
+        "Ç": 545.0,
+        "OS": 13.49,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "KONYA",
+        "PLAKA": "TR-42",
+        "Ç": 546.0,
+        "OS": 19.82,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "KÜTAHYA",
+        "PLAKA": "TR-43",
+        "Ç": 324.0,
+        "OS": 23.74,
+       "group": "DÇ-DOS"
+        
+    },
+    {
+        "AD": "MALATYA",
+        "PLAKA": "TR-44",
+        "Ç": 342.0,
+        "OS": 24.7,
+       "group": "DÇ-DOS"
+        
+    },
+    {
+        "AD": "MANİSA",
+        "PLAKA": "TR-45",
+        "Ç": 401.0,
+        "OS": 19.76,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "KAHRAMANMARAŞ",
+        "PLAKA": "TR-46",
+        "Ç": 296.0,
+        "OS": 23.39,
+        "group": "DÇ-DOS"
+    },
+    {
+        "AD": "MARDİN",
+        "PLAKA": "TR-47",
+        "Ç": 228.0,
+        "OS": 24.94,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "MUĞLA",
+        "PLAKA": "TR-48",
+        "Ç": 453.0,
+        "OS": 21.96,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "MUŞ",
+        "PLAKA": "TR-49",
+        "Ç": 188.0,
+        "OS": 29.76,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "NEVŞEHİR",
+        "PLAKA": "TR-50",
+        "Ç": 302.0,
+        "OS": 25.6,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "NİĞDE",
+        "PLAKA": "TR-51",
+        "Ç": 316.0,
+        "OS": 26.77,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "ORDU",
+        "PLAKA": "TR-52",
+        "Ç": 350.0,
+        "OS": 27.13,
+        "group": "YÇ-YOS"
+    },
+    {
+        "AD": "RİZE",
+        "PLAKA": "TR-53",
+        "Ç": 326.0,
+        "OS": 27.05,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "SAKARYA",
+        "PLAKA": "TR-54",
+        "Ç": 452.0,
+        "OS": 20.76,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "SAMSUN",
+        "PLAKA": "TR-55",
+        "Ç": 501.0,
+        "OS": 23.04,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "SİİRT",
+        "PLAKA": "TR-56",
+        "Ç": 224.0,
+        "OS": 29.0,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "SİNOP",
+        "PLAKA": "TR-57",
+        "Ç": 266.0,
+        "OS": 28.2,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "SİVAS",
+        "PLAKA": "TR-58",
+        "Ç": 369.0,
+        "OS": 26.95,
+        "group": "YÇ-YOS"
+    },
+    {
+        "AD": "TEKİRDAĞ",
+        "PLAKA": "TR-59",
+        "Ç": 385.0,
+        "OS": 14.8,
+        "group": "YÇ-DOS"
+    },
+    {
+        "AD": "TOKAT",
+        "PLAKA": "TR-60",
+        "Ç": 298.0,
+        "OS": 27.61,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "TRABZON",
+        "PLAKA": "TR-61",
+        "Ç": 450.0,
+        "OS": 24.08,
+        "group": "YÇ-DOS" 
+    },
+    {
+        "AD": "TUNCELİ",
+        "PLAKA": "TR-62",
+        "Ç": 190.0,
+        "OS": 30.02,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "ŞANLIURFA",
+        "PLAKA": "TR-63",
+        "Ç": 255.0,
+        "OS": 24.12,
+        "group": "DÇ-DOS"
+    },
+    {
+        "AD": "UŞAK",
+        "PLAKA": "TR-64",
+        "Ç": 303.0,
+        "OS": 24.3,
+        "group": "DÇ-DOS"
+    },
+    {
+        "AD": "VAN",
+        "PLAKA": "TR-65",
+        "Ç": 241.0,
+        "OS": 28.52,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "YOZGAT",
+        "PLAKA": "TR-66",
+        "Ç": 306.0,
+        "OS": 27.86,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "ZONGULDAK",
+        "PLAKA": "TR-67",
+        "Ç": 318.0,
+        "OS": 24.03,
+        "group": "DÇ-DOS"  
+    },
+    {
+        "AD": "AKSARAY",
+        "PLAKA": "TR-68",
+        "Ç": 336.0,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "BAYBURT",
+        "PLAKA": "TR-69",
+        "Ç": 193.0,
+        "OS": 32.75,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "KARAMAN",
+        "PLAKA": "TR-70",
+        "Ç": 274.0,
+        "OS": 25.67,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "KIRIKKALE",
+        "PLAKA": "TR-71",
+        "Ç": 288.0,
+        "OS": 25.91,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "BATMAN",
+        "PLAKA": "TR-72",
+        "Ç": 229.0,
+        "OS": 23.95,
+        "group": "DÇ-DOS"
+    },
+    {
+        "AD": "ŞIRNAK",
+        "PLAKA": "TR-73",
+        "Ç": 139.0,
+        "OS": 28.52,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "BARTIN",
+        "PLAKA": "TR-74",
+        "Ç": 282.0,
+        "OS": 28.49,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "ARDAHAN",
+        "PLAKA": "TR-75",
+        "Ç": 144.0,
+        "OS": 34.3,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "IĞDIR",
+        "PLAKA": "TR-76",
+        "Ç": 191.0,
+        "OS": 31.52,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "YALOVA",
+        "PLAKA": "TR-77",
+        "Ç": 232.0,
+        "OS": 20.51,
+       "group": "DÇ-DOS"
+    },
+    {
+        "AD": "KARABÜK",
+        "PLAKA": "TR-78",
+        "Ç": 274.0,
+        "OS": 26.5,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "KİLİS",
+        "PLAKA": "TR-79",
+        "Ç": 164.0,
+        "OS": 28.05,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "OSMANİYE",
+        "PLAKA": "TR-80",
+        "Ç": 307.0,
+        "OS": 26.35,
+        "group": "DÇ-YOS"
+    },
+    {
+        "AD": "DÜZCE",
+        "PLAKA": "TR-81",
+        "Ç": 317.0,
+        "OS": 21.77,
+       "group": "DÇ-DOS"
+        
+    }
+
+]

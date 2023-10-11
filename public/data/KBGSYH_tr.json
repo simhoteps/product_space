@@ -1,0 +1,128 @@
+[
+    {
+        "year": 2004,
+        "TR_KBGSYH": 8622.24,
+        "defl": 0.75,
+        "TR_KBGSYHreel": 11516.24,
+        "TR_KBGSYH_US": 6021
+    },
+    {
+        "year": 2005,
+        "TR_KBGSYH": 9940.41,
+        "defl": 0.8,
+        "TR_KBGSYHreel": 12494.7,
+        "TR_KBGSYH_US": 7376
+    },
+    {
+        "year": 2006,
+        "TR_KBGSYH": 11483.57,
+        "defl": 0.81,
+        "TR_KBGSYHreel": 14187.93,
+        "TR_KBGSYH_US": 7971
+    },
+    {
+        "year": 2007,
+        "TR_KBGSYH": 12653.05,
+        "defl": 0.89,
+        "TR_KBGSYHreel": 14266.16,
+        "TR_KBGSYH_US": 9735
+    },
+    {
+        "year": 2008,
+        "TR_KBGSYH": 14113.06,
+        "defl": 0.95,
+        "TR_KBGSYHreel": 14788.35,
+        "TR_KBGSYH_US": 11018
+    },
+    {
+        "year": 2009,
+        "TR_KBGSYH": 13969.79,
+        "defl": 1.0,
+        "TR_KBGSYHreel": 13969.79,
+        "TR_KBGSYH_US": 9044
+    },
+    {
+        "year": 2010,
+        "TR_KBGSYH": 15964.32,
+        "defl": 1.2,
+        "TR_KBGSYHreel": 13335.9,
+        "TR_KBGSYH_US": 10629
+    },
+    {
+        "year": 2011,
+        "TR_KBGSYH": 18928.31,
+        "defl": 1.27,
+        "TR_KBGSYHreel": 14912.38,
+        "TR_KBGSYH_US": 11289
+    },
+    {
+        "year": 2012,
+        "TR_KBGSYH": 21037.07,
+        "defl": 1.32,
+        "TR_KBGSYHreel": 15983.53,
+        "TR_KBGSYH_US": 11675
+    },
+    {
+        "year": 2013,
+        "TR_KBGSYH": 23945.95,
+        "defl": 1.29,
+        "TR_KBGSYHreel": 18618.2,
+        "TR_KBGSYH_US": 12582
+    },
+    {
+        "year": 2014,
+        "TR_KBGSYH": 26624.1,
+        "defl": 1.42,
+        "TR_KBGSYHreel": 18804.19,
+        "TR_KBGSYH_US": 12178
+    },
+    {
+        "year": 2015,
+        "TR_KBGSYH": 30056.09,
+        "defl": 1.55,
+        "TR_KBGSYHreel": 19354.22,
+        "TR_KBGSYH_US": 11085
+    },
+    {
+        "year": 2016,
+        "TR_KBGSYH": 33131.02,
+        "defl": 1.59,
+        "TR_KBGSYHreel": 20799.06,
+        "TR_KBGSYH_US": 10964
+    },
+    {
+        "year": 2017,
+        "TR_KBGSYH": 39018.79,
+        "defl": 1.78,
+        "TR_KBGSYHreel": 21910.83,
+        "TR_KBGSYH_US": 10696
+    },
+    {
+        "year": 2018,
+        "TR_KBGSYH": 46172.5,
+        "defl": 2.0,
+        "TR_KBGSYHreel": 23079.38,
+        "TR_KBGSYH_US": 9793
+    },
+    {
+        "year": 2019,
+        "TR_KBGSYH": 52213.15,
+        "defl": 2.46,
+        "TR_KBGSYHreel": 21182.43,
+        "TR_KBGSYH_US": 9195
+    },
+    {
+        "year": 2020,
+        "TR_KBGSYH": 60541.34,
+        "defl": 2.84,
+        "TR_KBGSYHreel": 21319.3,
+        "TR_KBGSYH_US": 8600
+    },
+    {
+        "year": 2021,
+        "TR_KBGSYH": 86144.03,
+        "defl": 3.49,
+        "TR_KBGSYHreel": 24666.22,
+        "TR_KBGSYH_US": 9592
+    }
+]

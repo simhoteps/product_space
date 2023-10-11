@@ -3,10 +3,6 @@ import ReactECharts from "echarts-for-react";
 import { useTheme } from "layouts/theme/ThemeContext";
 import { Stack } from "@mui/material";
 import numeral from "numeral";
-import { cityContext } from "context/CityProvider";
-import { useContext, useEffect, useState } from "react";
-
-import { IMapData } from "types/CityTypes";
 import { useStores } from "utils/hooks/use_store";
 import { observer } from "mobx-react";
 import { Size, useWindowSize } from "utils/hooks/use_window_size";

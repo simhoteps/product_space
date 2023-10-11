@@ -1,0 +1,569 @@
+[
+    {
+      "AD": "ADANA",
+      "PLAKA": "TR-01",
+      "SP": 16,
+      "OS": 19.39,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "ADIYAMAN",
+      "PLAKA": "TR-02",
+      "SP": 15.17,
+      "OS": 27.75,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "AFYONKARAHİSAR",
+      "PLAKA": "TR-03",
+      "SP": 15.61,
+      "OS": 25.52,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "AĞRI",
+      "PLAKA": "TR-04",
+      "SP": 14.93,
+      "OS": 29.64,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "AMASYA",
+      "PLAKA": "TR-05",
+      "SP": 15.59,
+      "OS": 26.41,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "ANKARA",
+      "PLAKA": "TR-06",
+      "SP": 16.1,
+      "OS": 14.99,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "ANTALYA",
+      "PLAKA": "TR-07",
+      "SP": 15.92,
+      "OS": 18.55,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "ARTVİN",
+      "PLAKA": "TR-08",
+      "SP": 15.23,
+      "OS": 29.65,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "AYDIN",
+      "PLAKA": "TR-09",
+      "SP": 15.83,
+      "OS": 23.46,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "BALIKESİR",
+      "PLAKA": "TR-10",
+      "SP": 15.84,
+      "OS": 22.08,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "BİLECİK",
+      "PLAKA": "TR-11",
+      "SP": 15.26,
+      "OS": 22.92,
+      "group": "DSP-DOS"
+    },
+    {
+      "AD": "BİNGÖL",
+      "PLAKA": "TR-12",
+      "SP": 15.15,
+      "OS": 29.37,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "BİTLİS",
+      "PLAKA": "TR-13",
+      "SP": 14.96,
+      "OS": 29.65,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "BOLU",
+      "PLAKA": "TR-14",
+      "SP": 15.41,
+      "OS": 24.08,
+      "group": "DSP-DOS"
+    },
+    {
+      "AD": "BURDUR",
+      "PLAKA": "TR-15",
+      "SP": 15.45,
+      "OS": 28.02,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "BURSA",
+      "PLAKA": "TR-16",
+      "SP": 15.92,
+      "OS": 14.99,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "ÇANAKKALE",
+      "PLAKA": "TR-17",
+      "SP": 15.66,
+      "OS": 24.64,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "ÇANKIRI",
+      "PLAKA": "TR-18",
+      "SP": 15.02,
+      "OS": 27.81,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "ÇORUM",
+      "PLAKA": "TR-19",
+      "SP": 15.61,
+      "OS": 25.57,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "DENİZLİ",
+      "PLAKA": "TR-20",
+      "SP": 15.84,
+      "OS": 19.33,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "DİYARBAKIR",
+      "PLAKA": "TR-21",
+      "SP": 15.54,
+      "OS": 22.91,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "EDİRNE",
+      "PLAKA": "TR-22",
+      "SP": 15.6,
+      "OS": 26.04,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "ELAZIĞ",
+      "PLAKA": "TR-23",
+      "SP": 15.58,
+      "OS": 25.48,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "ERZİNCAN",
+      "PLAKA": "TR-24",
+      "SP": 15.32,
+      "OS": 28.17,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "ERZURUM",
+      "PLAKA": "TR-25",
+      "SP": 15.46,
+      "OS": 26.16,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "ESKİŞEHİR",
+      "PLAKA": "TR-26",
+      "SP": 15.67,
+      "OS": 18.96,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "GAZİANTEP",
+      "PLAKA": "TR-27",
+      "SP": 15.69,
+      "OS": 17.38,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "GİRESUN",
+      "PLAKA": "TR-28",
+      "SP": 15.49,
+      "OS": 27.55,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "GÜMÜŞHANE",
+      "PLAKA": "TR-29",
+      "SP": 15.27,
+      "OS": 30.43,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "HAKKARİ",
+      "PLAKA": "TR-30",
+      "SP": 14.93,
+      "OS": 27.59,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "HATAY",
+      "PLAKA": "TR-31",
+      "SP": 15.67,
+      "OS": 22.75,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "ISPARTA",
+      "PLAKA": "TR-32",
+      "SP": 15.69,
+      "OS": 25.42,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "MERSİN",
+      "PLAKA": "TR-33",
+      "SP": 15.74,
+      "OS": 21.27,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "İSTANBUL",
+      "PLAKA": "TR-34",
+      "SP": 16.02,
+      "OS": 10.74,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "İZMİR",
+      "PLAKA": "TR-35",
+      "SP": 16.17,
+      "OS": 15.66,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "KARS",
+      "PLAKA": "TR-36",
+      "SP": 15.2,
+      "OS": 29.04,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "KASTAMONU",
+      "PLAKA": "TR-37",
+      "SP": 15.47,
+      "OS": 27.82,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "KAYSERİ",
+      "PLAKA": "TR-38",
+      "SP": 15.76,
+      "OS": 19.49,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "KIRKLARELİ",
+      "PLAKA": "TR-39",
+      "SP": 15.52,
+      "OS": 23.96,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "KIRŞEHİR",
+      "PLAKA": "TR-40",
+      "SP": 15.33,
+      "OS": 29.06,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "KOCAELİ",
+      "PLAKA": "TR-41",
+      "SP": 15.88,
+      "OS": 13.49,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "KONYA",
+      "PLAKA": "TR-42",
+      "SP": 15.95,
+      "OS": 19.82,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "KÜTAHYA",
+      "PLAKA": "TR-43",
+      "SP": 15.49,
+      "OS": 23.74,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "MALATYA",
+      "PLAKA": "TR-44",
+      "SP": 15.56,
+      "OS": 24.7,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "MANİSA",
+      "PLAKA": "TR-45",
+      "SP": 15.68,
+      "OS": 19.76,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "KAHRAMANMARAŞ",
+      "PLAKA": "TR-46",
+      "SP": 15.43,
+      "OS": 23.39,
+      "group": "DSP-DOS"
+    },
+    {
+      "AD": "MARDİN",
+      "PLAKA": "TR-47",
+      "SP": 15.19,
+      "OS": 24.94,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "MUĞLA",
+      "PLAKA": "TR-48",
+      "SP": 15.78,
+      "OS": 21.96,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "MUŞ",
+      "PLAKA": "TR-49",
+      "SP": 15.01,
+      "OS": 29.76,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "NEVŞEHİR",
+      "PLAKA": "TR-50",
+      "SP": 15.44,
+      "OS": 25.6,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "NİĞDE",
+      "PLAKA": "TR-51",
+      "SP": 15.5,
+      "OS": 26.77,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "ORDU",
+      "PLAKA": "TR-52",
+      "SP": 15.57,
+      "OS": 27.13,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "RİZE",
+      "PLAKA": "TR-53",
+      "SP": 15.52,
+      "OS": 27.05,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "SAKARYA",
+      "PLAKA": "TR-54",
+      "SP": 15.78,
+      "OS": 20.76,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "SAMSUN",
+      "PLAKA": "TR-55",
+      "SP": 15.85,
+      "OS": 23.04,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "SİİRT",
+      "PLAKA": "TR-56",
+      "SP": 15.19,
+      "OS": 29,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "SİNOP",
+      "PLAKA": "TR-57",
+      "SP": 15.34,
+      "OS": 28.2,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "SİVAS",
+      "PLAKA": "TR-58",
+      "SP": 15.59,
+      "OS": 26.95,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "TEKİRDAĞ",
+      "PLAKA": "TR-59",
+      "SP": 15.66,
+      "OS": 14.8,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "TOKAT",
+      "PLAKA": "TR-60",
+      "SP": 15.43,
+      "OS": 27.61,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "TRABZON",
+      "PLAKA": "TR-61",
+      "SP": 15.78,
+      "OS": 24.08,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "TUNCELİ",
+      "PLAKA": "TR-62",
+      "SP": 15.05,
+      "OS": 30.02,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "ŞANLIURFA",
+      "PLAKA": "TR-63",
+      "SP": 15.3,
+      "OS": 24.12,
+      "group": "DSP-DOS"
+    },
+    {
+      "AD": "UŞAK",
+      "PLAKA": "TR-64",
+      "SP": 15.45,
+      "OS": 24.3,
+      "group": "DSP-DOS"
+    },
+    {
+      "AD": "VAN",
+      "PLAKA": "TR-65",
+      "SP": 15.25,
+      "OS": 28.52,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "YOZGAT",
+      "PLAKA": "TR-66",
+      "SP": 15.43,
+      "OS": 27.86,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "ZONGULDAK",
+      "PLAKA": "TR-67",
+      "SP": 15.53,
+      "OS": 24.03,
+      "group": "YSP-DOS"
+    },
+    {
+      "AD": "AKSARAY",
+      "PLAKA": "TR-68",
+      "SP": 15.56,
+      "OS": 25.85,
+      "group": "YSP-YOS"
+    },
+    {
+      "AD": "BAYBURT",
+      "PLAKA": "TR-69",
+      "SP": 15.03,
+      "OS": 32.75,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "KARAMAN",
+      "PLAKA": "TR-70",
+      "SP": 15.41,
+      "OS": 25.67,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "KIRIKKALE",
+      "PLAKA": "TR-71",
+      "SP": 15.43,
+      "OS": 25.91,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "BATMAN",
+      "PLAKA": "TR-72",
+      "SP": 15.23,
+      "OS": 23.95,
+      "group": "DSP-DOS"
+    },
+    {
+      "AD": "ŞIRNAK",
+      "PLAKA": "TR-73",
+      "SP": 14.72,
+      "OS": 28.52,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "BARTIN",
+      "PLAKA": "TR-74",
+      "SP": 15.41,
+      "OS": 28.49,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "ARDAHAN",
+      "PLAKA": "TR-75",
+      "SP": 14.76,
+      "OS": 34.3,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "IĞDIR",
+      "PLAKA": "TR-76",
+      "SP": 15.03,
+      "OS": 31.52,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "YALOVA",
+      "PLAKA": "TR-77",
+      "SP": 15.29,
+      "OS": 20.51,
+      "group": "DSP-DOS"
+    },
+    {
+      "AD": "KARABÜK",
+      "PLAKA": "TR-78",
+      "SP": 15.4,
+      "OS": 26.5,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "KİLİS",
+      "PLAKA": "TR-79",
+      "SP": 14.92,
+      "OS": 28.05,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "OSMANİYE",
+      "PLAKA": "TR-80",
+      "SP": 15.47,
+      "OS": 26.35,
+      "group": "DSP-YOS"
+    },
+    {
+      "AD": "DÜZCE",
+      "PLAKA": "TR-81",
+      "SP": 15.52,
+      "OS": 21.77,
+      "group": "YSP-DOS"
+    }
+  ]

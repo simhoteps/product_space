@@ -23,12 +23,13 @@
     "part1": "Fosiller nelerdir?"
   },
   "homeMap": {
-    "specificSection": "Belirli Bölüme Atla",
+    "SpecificSection": "Belirli Bölüme Atla",
     "economicStructure": "Ekonomik Yapı",
     "Introduction":"Giriş",
-    "exportBasket":"2023 Yılındaki İhracat Sepeti",
     "exportComplexity":"2023'te İhracatın Karmaşıklığı",
+    "exportBasket":"2023 Yılındaki İhracat Sepeti",
     "marketDynamics": "Pazar Dinamikleri",
+    "EconomicComplexity":"Üretim Yapısının Karmaşıklığı",
     "exportGrowthDynamics":"İhracat Büyüme Dinamikleri",
     "growthinGlobalMarketShare":"Küresel Pazar Payındaki Büyüme",
     "diversificationIntoNewProducts":"Yeni Ürünlere Yönelik Çeşitlendirme",

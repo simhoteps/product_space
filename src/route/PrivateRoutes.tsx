@@ -7,6 +7,7 @@ import HomePage from "page/home/HomePage";
 import ReportsView from "page/reports/ReportsView";
 import AboutPage from "page/about/AboutPage";
 import CityInfo from "page/dashboard/components/cityInfo/CityInfo";
+import DataPage from "page/data/DataPage";
 
 const PrivateRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const PrivateRoutes = () => {
         <Route path="dashboard/map/:id" element={<CityInfo />} />
         <Route path="account" element={<AccountPage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="data" element={<DataPage />} />
         <Route path="reports" element={<ReportsView />} />
         <Route path="*" element={<Navigate to="/error/404" />} />
       </Route>
@@ -26,3 +28,22 @@ const PrivateRoutes = () => {
 };
 
 export default PrivateRoutes;
+
+const data = [
+  {
+    city: "adana",
+    data: [
+      {
+        name: "MADENCİLİK VE TAŞ OCAKÇILIĞI",
+        value: 0.62,
+        children: [
+          {
+            name: "Kömür ve linyit çıkartılması",
+            value: 0.21,
+            children: [{ name: "Linyit madenciliği", value: 0.42 }],
+          },
+        ],
+      },
+    ],
+  },
+];

@@ -81,7 +81,14 @@ const ButtonsBloks = ({
 const buttonArr = [
   {
     name: "economicStructure",
-    icon: <IconEconomicStructure sx={{ width: "42px", height: "42px" }} />,
+    icon: (
+      <IconEconomicStructure
+        sx={{
+          width: { xs: "24px ", sm: "42px" },
+          height: { xs: "24px ", sm: "42px" },
+        }}
+      />
+    ),
     subButton: [
       "Introduction",
       "EconomicComplexity",
@@ -91,7 +98,14 @@ const buttonArr = [
   },
   {
     name: "marketDynamics",
-    icon: <IconMarketDynamics sx={{ width: "42px", height: "42px" }} />,
+    icon: (
+      <IconMarketDynamics
+        sx={{
+          width: { xs: "24px ", sm: "42px" },
+          height: { xs: "24px ", sm: "42px" },
+        }}
+      />
+    ),
     subButton: [
       "exportGrowthDynamics",
       "growthinGlobalMarketShare",
@@ -100,7 +114,14 @@ const buttonArr = [
   },
   {
     name: "strategySpace",
-    icon: <IconStrategySpace sx={{ width: "42px", height: "42px" }} />,
+    icon: (
+      <IconStrategySpace
+        sx={{
+          width: { xs: "24px ", sm: "42px" },
+          height: { xs: "24px ", sm: "42px" },
+        }}
+      />
+    ),
     subButton: [
       "whatIstheProductSpace",
       "productSpace",
@@ -109,7 +130,14 @@ const buttonArr = [
   },
   {
     name: "growthOpportunities",
-    icon: <IconGrowthOpportunities sx={{ width: "42px", height: "42px" }} />,
+    icon: (
+      <IconGrowthOpportunities
+        sx={{
+          width: { xs: "24px ", sm: "42px" },
+          height: { xs: "24px ", sm: "42px" },
+        }}
+      />
+    ),
     subButton: [
       "potentialGrowthOpportunities",
       "newProductOpportunities",
@@ -128,7 +156,7 @@ export const SectionButtons = observer(() => {
       <Stack gap={"16px"} width={"100%"}>
         <Divider>
           <Typography variant="subtitle2">
-            {t("homeMap.specificSection")}
+            {t("homeMap.SpecificSection")}
           </Typography>
         </Divider>
 

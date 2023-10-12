@@ -6,7 +6,7 @@ import { ILinksPS, INodesPS } from "./type";
 const CHUNK_SIZE = 1000;
 
 const ProductSpace = () => {
-  /*   const [customLinks, setLinks] = useState<ILinksPS[]>([]);
+  const [customLinks, setLinks] = useState<ILinksPS[]>([]);
   const [customNodes, setNodes] = useState<INodesPS[]>([]);
   const [loadingLinks, setLoadingLinks] = useState<boolean>(true);
   const [loadingNodes, setLoadingNodes] = useState<boolean>(true);
@@ -15,8 +15,8 @@ const ProductSpace = () => {
     fetch("/data/productSpaceLinks.json")
       .then((response) => response.json())
       .then((data) => {
-        const filterData = data.filter((edge: ILinksPS) => edge.value > 0.6);
-        setLinks(filterData);
+        /*  const filterData = data.filter((edge: ILinksPS) => edge.value > 0.6); */
+        setLinks(data);
       })
       .then(() => {
         setLoadingLinks(false);
@@ -28,9 +28,9 @@ const ProductSpace = () => {
     fetch("/data/productSpaceNodes.json")
       .then((response) => response.json())
       .then((data) => {
-          const filterData = data.filter(
+        const filterData = data.filter(
           (node: INodesPS) => node.symbolSize > 80
-        ); 
+        );
         setNodes(data);
       })
       .then(() => {
@@ -41,14 +41,14 @@ const ProductSpace = () => {
 
   if (loadingLinks) {
     return <div>Loading...</div>;
-  } */
+  }
 
   return (
     <div>
       <ForceLayoutGraph
-        categories={data1.categories}
-        nodes={data1.nodes}
-        links={data1.links}
+        categories={categories}
+        nodes={customNodes}
+        links={customLinks}
       />
     </div>
   );
@@ -145,63 +145,63 @@ const data1 = {
       id: "1",
       value: 22,
       name: 1,
-      symbolSize: 200,
+      symbolSize: 100,
     },
     {
       category: "B",
       id: "2",
       value: 22,
       name: 2,
-      symbolSize: 200,
+      symbolSize: 100,
     },
     {
       category: "C",
       id: "3",
       value: 22,
       name: 3,
-      symbolSize: 200,
+      symbolSize: 100,
     },
     {
       category: "E",
       id: "4",
       value: 22,
       name: 4,
-      symbolSize: 200,
+      symbolSize: 100,
     },
     {
       category: "E",
       id: "5",
       value: 22,
       name: 5,
-      symbolSize: 200,
+      symbolSize: 100,
     },
     {
       category: "B",
       id: "6",
       value: 22,
       name: 6,
-      symbolSize: 150,
+      symbolSize: 100,
     },
     {
       category: "D",
       id: "7",
       value: 22,
       name: 7,
-      symbolSize: 200,
+      symbolSize: 100,
     },
     {
       category: "B",
       id: "8",
       value: 22,
       name: 8,
-      symbolSize: 200,
+      symbolSize: 100,
     },
     {
       category: "B",
       id: "9",
       value: 22,
       name: 9,
-      symbolSize: 200,
+      symbolSize: 100,
     },
   ],
   categories: [

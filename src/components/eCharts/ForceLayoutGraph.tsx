@@ -22,7 +22,7 @@ const ForceLayoutGraph = React.memo(
     return (
       <div>
         <ReactEcharts
-          style={{ height: "700px" }}
+          style={{ height: "550px" }}
           option={{
             title: {},
             tooltip: {
@@ -61,13 +61,7 @@ const ForceLayoutGraph = React.memo(
                     symbolSize: node.symbolSize / 10,
                   };
                 }),
-                links: links.map(function (edge) {
-                  return {
-                    source: `${edge.source}`,
-                    target: `${edge.target}`,
-                    value: edge.value,
-                  };
-                }),
+                links: links,
                 /*  links: links
                   .filter((edge) => edge.value > 0.4)
                   .map(function (edge) {
@@ -89,16 +83,11 @@ const ForceLayoutGraph = React.memo(
                   position: "right",
                 },
                 scaleLimit: {
-                  min: 0.3,
-                  max: 3,
+                  min: 0.1,
+                  max: 1,
                 },
                 force: {
                   friction: 0.5,
-                  /*  layoutAnimation: false, */
-
-                  /*    repulsion: links.map(function (a) {
-                    return a.value;
-                  }), */
                   edgeLength: links.map(function (a) {
                     return a.value * 10;
                   }),

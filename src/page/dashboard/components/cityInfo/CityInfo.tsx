@@ -215,21 +215,25 @@ const CityInfo = () => {
                 height: `calc(${windowsize?.height}px - 190px)`,
               }}
             >
-              {treeLoading === true && <CustomLoading />}
-              {openSubFilter === "Introduction" && selected?.name && (
-                <TreemapDrillDown
-                  cityName={selected?.name}
-                  cityData={treeData}
-                />
-              )}
-              {openSubFilter === "EconomicComplexity" && selected?.name && (
-                <TreemapDrillDownUniq
-                  cityName={selected?.name}
-                  cityData={treeColorData}
-                />
-              )}
-              {openSubFilter === "whatIstheProductSpace" && selected?.name && (
-                <ProductSpace />
+              {treeLoading === true ? (
+                <CustomLoading />
+              ) : (
+                <>
+                  {openSubFilter === "Introduction" && selected?.name && (
+                    <TreemapDrillDown
+                      cityName={selected?.name}
+                      cityData={treeData}
+                    />
+                  )}
+                  {openSubFilter === "EconomicComplexity" && selected?.name && (
+                    <TreemapDrillDownUniq
+                      cityName={selected?.name}
+                      cityData={treeColorData}
+                    />
+                  )}
+                  {openSubFilter === "whatIstheProductSpace" &&
+                    selected?.name && <ProductSpace />}
+                </>
               )}
             </ChartContainer>
           </LeftContainer>

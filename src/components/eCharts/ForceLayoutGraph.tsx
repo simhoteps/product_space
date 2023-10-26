@@ -7,6 +7,7 @@ import {
   ILinksPS,
   INodesPS,
 } from "page/dashboard/components/cityInfo/ProductSpace/type";
+import { Size, useWindowSize } from "utils/hooks/use_window_size";
 
 const ForceLayoutGraph = React.memo(
   ({
@@ -16,13 +17,17 @@ const ForceLayoutGraph = React.memo(
   }: {
     categories: ICategoriesPS[];
     nodes: INodesPS[];
-    links: ILinksPS[];
+    links: { v: string; w: string }[];
   }) => {
+    const windowsize: Size = useWindowSize();
     const formatUtil = echarts.format;
     return (
       <div>
         <ReactEcharts
-          style={{ height: "550px" }}
+          style={{
+            /*  maxHeight: `calc(${windowsize?.height}px - 220px)`, */
+            height: `70vh`,
+          }}
           option={{
             title: {},
             tooltip: {
@@ -52,24 +57,25 @@ const ForceLayoutGraph = React.memo(
                 type: "graph",
                 layout: "force",
                 animation: false,
+
+                circular: {
+                  rotateLabel: true,
+                },
                 data: nodes.map(function (node) {
                   return {
-                    category: node.category,
                     id: `${node.id}`,
-                    name: node.name,
-                    /*   value: node.symbolSize, */
-                    symbolSize: node.symbolSize / 10,
+                    name: `${node.name}`,
+                    /* category: node.category, */
+                    symbolSize: node.symbolSize * 10,
                   };
                 }),
-                links: links,
-                /*  links: links
-                  .filter((edge) => edge.value > 0.4)
-                  .map(function (edge) {
-                    return {
-                      source: edge.source,
-                      target: edge.target,
-                    };
-                  }), */
+                /*   links: links, */
+                links: links.map(function (edge) {
+                  return {
+                    source: edge.v,
+                    target: edge.w,
+                  };
+                }),
                 categories: categories,
                 emphasis: {
                   focus: "adjacency",
@@ -86,12 +92,12 @@ const ForceLayoutGraph = React.memo(
                   min: 0.1,
                   max: 1,
                 },
-                force: {
+                /*     force: {
                   friction: 0.5,
                   edgeLength: links.map(function (a) {
                     return a.value * 10;
                   }),
-                },
+                }, */
               },
             ],
           }}

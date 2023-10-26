@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ForceLayoutGraph from "components/eCharts/ForceLayoutGraph";
 import { ILinksPS, INodesPS } from "./type";
+import { Graph, Edge } from "@dagrejs/graphlib";
 
 const CHUNK_SIZE = 1000;
 
 const ProductSpace = () => {
+  const [graph, setGraph] = useState<Graph>(new Graph());
+
   const [customLinks, setLinks] = useState<ILinksPS[]>([]);
   const [customNodes, setNodes] = useState<INodesPS[]>([]);
   const [loadingLinks, setLoadingLinks] = useState<boolean>(true);
@@ -16,7 +19,11 @@ const ProductSpace = () => {
       .then((response) => response.json())
       .then((data) => {
         /*  const filterData = data.filter((edge: ILinksPS) => edge.value > 0.6); */
-        setLinks(data);
+
+        const filterData = data.map((edge: ILinksPS) =>
+          setGraph(graph.setEdge(edge.source, edge.target, edge.value))
+        );
+        setLinks(filterData);
       })
       .then(() => {
         setLoadingLinks(false);
@@ -28,8 +35,11 @@ const ProductSpace = () => {
     fetch("/data/productSpaceNodes.json")
       .then((response) => response.json())
       .then((data) => {
-        const filterData = data.filter(
+        /*   const filterData = data.filter(
           (node: INodesPS) => node.symbolSize > 80
+        ); */
+        data.map((node: INodesPS) =>
+          setGraph(graph.setNode(node.id, node.category))
         );
         setNodes(data);
       })
@@ -42,13 +52,14 @@ const ProductSpace = () => {
   if (loadingLinks) {
     return <div>Loading...</div>;
   }
-
+  console.log(graph.nodes());
+  console.log(customNodes);
   return (
     <div>
       <ForceLayoutGraph
         categories={categories}
         nodes={customNodes}
-        links={customLinks}
+        links={graph.edges()}
       />
     </div>
   );
@@ -295,53 +306,53 @@ const nodes = [
 ];
 const categories = [
   {
-    name: "B",
-    base: "B",
+    name: "B/C-Minarel ürünler, madencilik ve taş ocakçılığı",
+    base: "B/C-Minarel ürünler, madencilik ve taş ocakçılığı",
   },
   {
-    name: "C",
-    base: "C",
+    name: "C-Gıda ve tarım",
+    base: "C-Gıda ve tarım",
   },
   {
-    name: "D",
-    base: "D",
+    name: "C-Mobilya, kağıt ve diğer ağaç ürünleri",
+    base: "C-Mobilya, kağıt ve diğer ağaç ürünleri",
   },
   {
-    name: "E",
-    base: "E",
+    name: "Ticaret,ulaşım ve konaklama    ",
+    base: "Ticaret,ulaşım ve konaklama    ",
   },
   {
-    name: "F",
-    base: "F",
+    name: "C-Makine ve ekipman imalatı  ",
+    base: "C-Makine ve ekipman imalatı  ",
   },
   {
-    name: "G",
-    base: "G",
+    name: "C-Kimya ve Eczacılık   ",
+    base: "C-Kimya ve Eczacılık   ",
   },
   {
-    name: "H",
-    base: "H",
+    name: "Diğer Hizmet",
+    base: "Diğer Hizmet",
   },
   {
-    name: "I",
-    base: "I",
+    name: "C-Metal ürünler",
+    base: "C-Metal ürünler",
   },
   {
-    name: "J",
-    base: "J",
+    name: "C-Tekstil ve giyim",
+    base: "C-Tekstil ve giyim",
   },
   {
-    name: "L",
-    base: "L",
+    name: "C-Metal ürünler",
+    base: "C-Metal ürünler",
   },
   {
-    name: "M",
-    base: "M",
+    name: "C-Diğer    ",
+    base: "C-Diğer    ",
   },
   {
-    name: "N",
-    base: "N",
-  },
+    name: "Bilgi, İletişim, bilimsel ve teknik faaliyetler ",
+    base: "Bilgi, İletişim, bilimsel ve teknik faaliyetler ",
+  } /* ,
   {
     name: "P",
     base: "P",
@@ -357,7 +368,7 @@ const categories = [
   {
     name: "S",
     base: "S",
-  },
+  }, */,
 ];
 
 const data = {

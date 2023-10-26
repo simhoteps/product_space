@@ -7,6 +7,7 @@
     "@ant-design/plots": "^1.2.5",
     "@antv/g6": "^4.8.22",
     "@antv/g6-react-node": "^1.4.5",
+    "@dagrejs/graphlib": "^2.1.13",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.3",

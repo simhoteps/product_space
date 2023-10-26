@@ -25,7 +25,6 @@ const ForceLayoutGraph = React.memo(
       <div>
         <ReactEcharts
           style={{
-            /*  maxHeight: `calc(${windowsize?.height}px - 220px)`, */
             height: `70vh`,
           }}
           option={{
@@ -65,8 +64,8 @@ const ForceLayoutGraph = React.memo(
                   return {
                     id: `${node.id}`,
                     name: `${node.name}`,
-                    /* category: node.category, */
-                    symbolSize: node.symbolSize * 10,
+                    category: `${node.category}`,
+                    symbolSize: node.symbolSize * 15,
                   };
                 }),
                 /*   links: links, */
@@ -90,14 +89,15 @@ const ForceLayoutGraph = React.memo(
                 },
                 scaleLimit: {
                   min: 0.1,
-                  max: 1,
+                  max: 3,
                 },
-                /*     force: {
+                force: {
+                  gravity: 0.01,
                   friction: 0.5,
-                  edgeLength: links.map(function (a) {
+                  /*  edgeLength: links.map(function (a) {
                     return a.value * 10;
-                  }),
-                }, */
+                  }), */
+                },
               },
             ],
           }}

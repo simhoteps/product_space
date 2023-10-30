@@ -4,6 +4,7 @@ export interface ICategoriesPS {
   }
   
   export  interface INodesPS {
+
     category: string;
     id: string;
     value: number;

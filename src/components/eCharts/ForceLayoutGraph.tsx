@@ -17,34 +17,33 @@ const ForceLayoutGraph = React.memo(
   }: {
     categories: ICategoriesPS[];
     nodes: INodesPS[];
-    links: { v: string; w: string }[];
+    links: ILinksPS[];
   }) => {
     const windowsize: Size = useWindowSize();
     const formatUtil = echarts.format;
+
     return (
       <div>
         <ReactEcharts
           style={{
-            height: `70vh`,
+            height: `72vh`,
+            width: "100%",
           }}
           option={{
             title: {},
             tooltip: {
-              formatter: function (info: {
-                value: any;
-                name: any;
-                treePathInfo: any;
-              }) {
+              formatter: function (info: any) {
                 return [
                   '<div class="tooltip-title">  <div class="div-text">' +
                     formatUtil.addCommas(info.name) +
                     "</div> </div>",
-                  "Value: " + formatUtil.addCommas(info.value),
+                  "Değeri: " + formatUtil.addCommas(info.data.symbolSize),
                 ].join("");
               },
             },
             legend: [
               {
+                show: true,
                 data: categories.map(function (a) {
                   return a.name;
                 }),
@@ -55,10 +54,8 @@ const ForceLayoutGraph = React.memo(
                 name: "Les Miserables",
                 type: "graph",
                 layout: "force",
-                animation: false,
-
                 circular: {
-                  rotateLabel: true,
+                  rotateLabel: false,
                 },
                 data: nodes.map(function (node) {
                   return {
@@ -68,13 +65,14 @@ const ForceLayoutGraph = React.memo(
                     symbolSize: node.symbolSize * 15,
                   };
                 }),
-                /*   links: links, */
-                links: links.map(function (edge) {
+
+                links: links,
+                /*   links: links.map(function (edge) {
                   return {
                     source: edge.v,
                     target: edge.w,
                   };
-                }),
+                }), */
                 categories: categories,
                 emphasis: {
                   focus: "adjacency",
@@ -85,19 +83,28 @@ const ForceLayoutGraph = React.memo(
                 },
                 roam: true,
                 label: {
-                  position: "right",
+                  show: false,
+                  /*  position: "right", */
                 },
                 scaleLimit: {
-                  min: 0.1,
-                  max: 3,
+                  min: 0.5,
+                  max: 2,
                 },
                 force: {
+                  /*    gravity: 0.01, */
+                  /*  friction: 0.5, */
+
+                  repulsion: 5,
                   gravity: 0.01,
-                  friction: 0.5,
-                  /*  edgeLength: links.map(function (a) {
-                    return a.value * 10;
+                  edgeLength: links.map(function (a) {
+                    return a.value * 400;
+                  }),
+
+                  /*    edgeLength: links.map(function (a) {
+                    return a.value * 400;
                   }), */
                 },
+                animation: false,
               },
             ],
           }}

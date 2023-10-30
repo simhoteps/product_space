@@ -20,6 +20,8 @@ import { Size, useWindowSize } from "utils/hooks/use_window_size";
 import ProductSpace from "./ProductSpace/productSpace";
 import { useTheme } from "layouts/theme/ThemeContext";
 import CustomLoading from "components/loading/CustomLoading";
+import ExportBasketTree from "./ExportBasketTree";
+import ExportComplexityTree from "./ExportComplexityTree";
 
 interface TreeNode {
   name: string;
@@ -92,6 +94,7 @@ const CityInfo = () => {
   const [treeData, setTreeData] = useState<ITreeNode[]>([]);
   const [treeLoading, setTreeLoading] = useState<boolean>(false);
   const [treeColorData, setTreeColorData] = useState<TreeNode[]>([]);
+
   useEffect(() => {
     setTreeLoading(true);
     fetch("/data/turkey_city_tree_map_color.json")
@@ -229,7 +232,16 @@ const CityInfo = () => {
                     <TreemapDrillDownUniq
                       cityName={selected?.name}
                       cityData={treeColorData}
+                      max={4}
+                      min={-1}
                     />
+                  )}
+
+                  {openSubFilter === "exportBasket" && selected?.name && (
+                    <ExportBasketTree id={id} />
+                  )}
+                  {openSubFilter === "exportComplexity" && selected?.name && (
+                    <ExportComplexityTree id={id} />
                   )}
                   {openSubFilter === "whatIstheProductSpace" &&
                     selected?.name && <ProductSpace />}

@@ -194,6 +194,7 @@ export const SectionDashButtons = () => {
           {buttonArr.map((item) => {
             return (
               <ButtonsBloks
+                key={`homeMap.${item.name}`}
                 title={t(`homeMap.${item.name}`)}
                 icon={item.icon}
                 isSelect={openFilter === item.name}

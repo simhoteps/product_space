@@ -16,7 +16,7 @@ const TreemapDrillDown = ({
   cityName,
   cityData,
 }: {
-  cityName: string;
+  cityName: string | undefined;
   cityData: ITreeNode[];
 }) => {
   const { theme } = useTheme();

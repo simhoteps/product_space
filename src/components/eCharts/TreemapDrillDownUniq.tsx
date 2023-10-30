@@ -15,9 +15,13 @@ interface TreeNode {
 const TreemapDrillDownUniq = ({
   cityName,
   cityData,
+  max,
+  min,
 }: {
-  cityName: string;
+  cityName: string | undefined;
   cityData: TreeNode[];
+  max: number;
+  min: number;
 }) => {
   const { theme } = useTheme();
   const windowsize: Size = useWindowSize();
@@ -56,8 +60,10 @@ const TreemapDrillDownUniq = ({
             itemWidth: 12,
             orient: "horizontal",
             bottom: 19,
-            min: -1 /*  minMaxValues.min, */,
-            max: 4 /* minMaxValues.max, */,
+            min: min,
+            max: max,
+            /*   min: -1 ,
+            max: 4, */
             text: ["High", "Low"],
             calculable: true,
             textStyle: {

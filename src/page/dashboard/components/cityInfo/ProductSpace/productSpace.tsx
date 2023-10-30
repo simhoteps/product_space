@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import ForceLayoutGraph from "components/eCharts/ForceLayoutGraph";
 import { ILinksPS, INodesPS } from "./type";
-import { Graph, Edge } from "@dagrejs/graphlib";
+import { Graph } from "@dagrejs/graphlib";
 
 const CHUNK_SIZE = 1000;
 
@@ -20,10 +19,10 @@ const ProductSpace = () => {
       .then((data) => {
         /*  const filterData = data.filter((edge: ILinksPS) => edge.value > 0.6); */
 
-        const filterData = data.map((edge: ILinksPS) =>
+        /*    const filterData = data.map((edge: ILinksPS) =>
           setGraph(graph.setEdge(edge.source, edge.target, edge.value))
-        );
-        setLinks(filterData);
+        ); */
+        setLinks(data);
       })
       .then(() => {
         setLoadingLinks(false);
@@ -38,9 +37,9 @@ const ProductSpace = () => {
         /*   const filterData = data.filter(
           (node: INodesPS) => node.symbolSize > 80
         ); */
-        data.map((node: INodesPS) =>
+        /*       data.map((node: INodesPS) =>
           setGraph(graph.setNode(node.id, node.category))
-        );
+        ); */
         setNodes(data);
       })
       .then(() => {
@@ -59,7 +58,8 @@ const ProductSpace = () => {
       <ForceLayoutGraph
         categories={categories}
         nodes={customNodes}
-        links={graph.edges()}
+        links={customLinks}
+        /*   links={graph.edges()} */
       />
     </div>
   );

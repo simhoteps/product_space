@@ -28,22 +28,3 @@ const PrivateRoutes = () => {
 };
 
 export default PrivateRoutes;
-
-const data = [
-  {
-    city: "adana",
-    data: [
-      {
-        name: "MADENCİLİK VE TAŞ OCAKÇILIĞI",
-        value: 0.62,
-        children: [
-          {
-            name: "Kömür ve linyit çıkartılması",
-            value: 0.21,
-            children: [{ name: "Linyit madenciliği", value: 0.42 }],
-          },
-        ],
-      },
-    ],
-  },
-];

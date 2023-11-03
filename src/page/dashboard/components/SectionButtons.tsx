@@ -13,6 +13,7 @@ import {
   IconEconomicStructure,
   IconGrowthOpportunities,
   IconMarketDynamics,
+  IconProductSpace,
   IconStrategySpace,
 } from "components/icons/Economy";
 import { useTheme } from "layouts/theme/ThemeContext";
@@ -27,10 +28,10 @@ const SubButton = styled(Button)<{ isSelect: boolean }>(
     textTransform: "none",
     padding: "8px",
     color: theme.palette.primary.dark,
-    boxShadow: `${alpha(
+    /*     boxShadow: `${alpha(
       theme.palette.primary.contrastText,
       0.1
-    )} 0px 2px 8px 0px`,
+    )} 0px 2px 8px 0px`, */
     fontWeight: isSelect ? 700 : 400,
     backgroundColor: isSelect ? theme.palette.warning.main : "transparent",
 
@@ -80,6 +81,25 @@ const ButtonsBloks = ({
 
 const buttonArr = [
   {
+    name: "currentStatus",
+    icon: (
+      <IconMarketDynamics
+        sx={{
+          width: { xs: "24px ", sm: "42px" },
+          height: { xs: "24px ", sm: "42px" },
+        }}
+      />
+    ),
+    subButton: [
+      "averageUniquityDiversity",
+      "openForestAverageUbiquity",
+      "openForestDiversity",
+      "openForestEconomicComplexity",
+      "grossDomesticProductSophistication",
+      "economicComplexity",
+    ],
+  },
+  {
     name: "economicStructure",
     icon: (
       <IconEconomicStructure
@@ -90,13 +110,45 @@ const buttonArr = [
       />
     ),
     subButton: [
-      "Introduction",
-      "EconomicComplexity",
-      "exportBasket",
-      "exportComplexity",
+      "specilizationofProductStructure",
+      "complexityofProductStructure",
+      "specilizationinExport",
+      "complexityofExportStructure",
+      "complexityofExportBasket",
     ],
   },
   {
+    name: "productSpace",
+    icon: (
+      <IconProductSpace
+        sx={{
+          width: { xs: "24px ", sm: "42px" },
+          height: { xs: "24px ", sm: "42px" },
+        }}
+      />
+    ),
+    subButton: ["whatIstheProductSpace", "productSpace"],
+  },
+  {
+    name: "strategies",
+    icon: (
+      <IconStrategySpace
+        sx={{
+          width: { xs: "24px ", sm: "42px" },
+          height: { xs: "24px ", sm: "42px" },
+        }}
+      />
+    ),
+    subButton: [
+      "efficientFrontier",
+      "potentialGrowth",
+      "recommendedStrategicApproach",
+      "latentSectorOpportunities",
+    ],
+  },
+
+  /*
+    {
     name: "marketDynamics",
     icon: (
       <IconMarketDynamics
@@ -111,23 +163,7 @@ const buttonArr = [
       "growthinGlobalMarketShare",
       "diversificationIntoNewProducts",
     ],
-  },
-  {
-    name: "strategySpace",
-    icon: (
-      <IconStrategySpace
-        sx={{
-          width: { xs: "24px ", sm: "42px" },
-          height: { xs: "24px ", sm: "42px" },
-        }}
-      />
-    ),
-    subButton: [
-      "whatIstheProductSpace",
-      "productSpace",
-      "EcommendedStrategicApproach",
-    ],
-  },
+  },   
   {
     name: "growthOpportunities",
     icon: (
@@ -143,7 +179,7 @@ const buttonArr = [
       "newProductOpportunities",
       "summary",
     ],
-  },
+  }, */
 ];
 
 export const SectionButtons = observer(() => {
@@ -156,15 +192,16 @@ export const SectionButtons = observer(() => {
       <Stack gap={"16px"} width={"100%"}>
         <Divider>
           <Typography variant="subtitle2">
-            {t("homeMap.SpecificSection")}
+            {t("sidebarTabs.SpecificSection")}
           </Typography>
         </Divider>
 
         <Stack direction={"row"} gap={"16px"} justifyContent={"space-between"}>
-          {buttonArr.map((item) => {
+          {buttonArr.map((item, i) => {
             return (
               <ButtonsBloks
-                title={t(`homeMap.${item.name}`)}
+                key={`sidebarTabs.${i}`}
+                title={t(`sidebarTabs.${item.name}`)}
                 icon={item.icon}
                 /*    isSelect={openFilter === item.name} */
                 onClick={() => {
@@ -194,8 +231,8 @@ export const SectionDashButtons = () => {
           {buttonArr.map((item) => {
             return (
               <ButtonsBloks
-                key={`homeMap.${item.name}`}
-                title={t(`homeMap.${item.name}`)}
+                key={`sidebarTabs.${item.name}`}
+                title={t(`sidebarTabs.${item.name}`)}
                 icon={item.icon}
                 isSelect={openFilter === item.name}
                 onClick={() => {
@@ -212,10 +249,10 @@ export const SectionDashButtons = () => {
         return (
           <>
             {openFilter === item.name && (
-              <Stack gap={"16px"}>
+              <Stack key={`sidebarTabs.${item.name}`} gap={"16px"}>
                 <Divider>
                   <Typography variant="subtitle2">
-                    {t(`homeMap.${item.name}`)}
+                    {t(`sidebarTabs.${item.name}`)}
                   </Typography>
                 </Divider>
                 <Stack direction={"row"} gap={"16px"} width={"100%"}>
@@ -227,7 +264,7 @@ export const SectionDashButtons = () => {
                           setSubFilter(sub);
                         }}
                       >
-                        {t(`homeMap.${sub}`)}
+                        {t(`sidebarTabs.${sub}`)}
                       </SubButton>
                     );
                   })}

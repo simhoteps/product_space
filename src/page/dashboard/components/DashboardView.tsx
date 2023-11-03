@@ -159,15 +159,15 @@ const DashboardView = () => {
             Ortalama Sıradanlık (OS)-Çeşitlilik (Ç)
           </Typography>
         </Divider>
-        {cosData.length > 1 && (
-          <ScatterPlotEChart
+        {/*   {cosData.length > 1 && (
+      <ScatterPlotEChart
             sizeField={"city"}
             xField={"çeşitlilik"}
             yField={"Ortalama sıradanlık"}
             colorField={"team"}
             data={cosData}
-          />
-        )}
+          /> 
+        )} */}
         {sposData.length > 1 && (
           <>
             <Divider>
@@ -175,13 +175,13 @@ const DashboardView = () => {
                 Sıçrama Potansiyeli (SP)-Ortalama Sıradanlık (SP)
               </Typography>
             </Divider>
-            <ScatterPlotEChart
+            {/*   <ScatterPlotEChart
               sizeField={"city"}
               xField={"Ortalama sıradanlık"}
               yField={"sp"}
               colorField={"team"}
               data={sposData}
-            />
+            /> */}
           </>
         )}
 
@@ -190,7 +190,7 @@ const DashboardView = () => {
             Ekonomik Kompleksite (ECI)
           </Typography>
         </Divider>
-        <ColumnBasicChartEcharts />
+        {/*  <ColumnBasicChartEcharts /> */}
       </Stack>
     </Stack>
   );

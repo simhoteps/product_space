@@ -11,7 +11,7 @@ interface Item {
   eci: number;
 }
 
-const ColumnBasicChartEcharts = () => {
+const ColumnBasicChartEcharts = ({ cheight }: { cheight: string }) => {
   const { theme } = useTheme();
   const cityData = turkeySGKData.map((item) => {
     return {
@@ -39,6 +39,9 @@ const ColumnBasicChartEcharts = () => {
   return (
     <Stack width={"120%"} marginBottom={"24px"} marginLeft={"-9%"}>
       <ReactEcharts
+        style={{
+          height: cheight,
+        }}
         option={{
           tooltip: {
             trigger: "item",

@@ -1,6 +1,104 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
 import { useTheme } from "layouts/theme/ThemeContext";
 
+export const IconProductSpace = (props: SvgIconProps) => {
+  const { theme } = useTheme();
+  return (
+    <SvgIcon
+      {...props}
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="10.8836"
+        cy="12.5145"
+        r="2.91445"
+        fill="none"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <circle
+        cx="11.5437"
+        cy="27.2312"
+        r="2.91445"
+        fill="none"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <circle
+        cx="19.7804"
+        cy="19.6534"
+        r="3.46358"
+        fill="none"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <circle
+        cx="26.8103"
+        cy="12.6247"
+        r="1.70636"
+        fill="none"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <circle
+        cx="3.30636"
+        cy="23.8259"
+        r="1.70636"
+        fill="none"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <path
+        d="M38.3993 23.1676C38.3993 25.8084 36.2586 27.9491 33.6178 27.9491C30.9771 27.9491 28.8363 25.8084 28.8363 23.1676C28.8363 20.5269 30.9771 18.3861 33.6178 18.3861C36.2586 18.3861 38.3993 20.5269 38.3993 23.1676Z"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+        fill="none"
+      />
+      <path
+        d="M22.416 17.2377L25.2715 14.0527"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <line
+        x1="16.6298"
+        y1="17.4722"
+        x2="13.1495"
+        y2="14.7436"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <line
+        x1="23.615"
+        y1="19.8601"
+        x2="28.8866"
+        y2="21.837"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <line
+        x1="17.4594"
+        y1="22.3842"
+        x2="14.3843"
+        y2="25.4594"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+      <line
+        x1="8.73162"
+        y1="26.5366"
+        x2="4.73174"
+        y2="24.5362"
+        stroke={theme.palette.primary.dark}
+        stroke-width="2"
+      />
+    </SvgIcon>
+  );
+};
+
 export const IconEconomicStructure = (props: SvgIconProps) => {
   const { theme } = useTheme();
   return (

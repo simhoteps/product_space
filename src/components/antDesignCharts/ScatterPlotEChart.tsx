@@ -8,18 +8,21 @@ const ScatterPlotEChart = ({
   yField,
   sizeField,
   colorField,
+  cheight,
 }: {
   data: any;
   xField: string;
   yField: string;
   sizeField: string;
   colorField: string;
+  cheight: string | number | undefined;
 }) => {
   const { theme } = useTheme();
 
   const config = {
     appendPadding: 30,
     data,
+
     sizeField: sizeField,
     xField: xField,
     yField: yField,
@@ -76,7 +79,14 @@ const ScatterPlotEChart = ({
     },
   };
 
-  return <Scatter {...config} />;
+  return (
+    <Scatter
+      style={{
+        height: cheight,
+      }}
+      {...config}
+    />
+  );
 };
 
 export default ScatterPlotEChart;

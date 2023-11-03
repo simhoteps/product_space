@@ -22,6 +22,30 @@
   "dashboard": {
     "part1": "Fosiller nelerdir?"
   },
+  "sidebarTabs":{
+    "productSpace": "Ürün Uzayı",
+    "currentStatus":"Mevcut Durum",
+    "economicStructure": "Ekonomik Yapı",
+    "strategies": "Strateji Uzayı",
+    "Introduction":"Giriş",
+    "whatIstheProductSpace":"Ürün Uzayı Nedir?",
+    "economicComplexity":"Ekonomik Kompleksite",
+    "averageUniquityDiversity":"Ortalama sıradanlık - çeşitlilik",
+    "openForestAverageUbiquity":"Sıçrama potansiyeli - ortalama sıradanlık",
+    "openForestDiversity":"Sıçrama potansiyeli - çeşitlilik",
+    "openForestEconomicComplexity":"Sıçrama potansiyeli - ekonomik komplesite",
+    "grossDomesticProductSophistication":"GSYİH - ürün sofistikasyonu",
+    "specilizationofProductStructure":"Üretim yapısının uzmanlığı",
+    "complexityofProductStructure":"Üretim yapısının karmaşıklığı",
+    "specilizationinExport":"İhracat- uzmanlaşma",
+    "complexityofExportStructure":"İhracat - karmaşıklık",
+    "complexityofExportBasket":"İhracat sepeti - uzmanlaşma",
+    "efficientFrontier":"Verimlilik Sınırı",
+    "potentialGrowth":"Potansiyel Büyüme",
+    "recommendedStrategicApproach":"Önerilen stratejik yaklaşım",
+    "latentSectorOpportunities":"Gizli Sektör Fırsatları"
+  },
+
   "homeMap": {
     "SpecificSection": "Belirli Bölüme Atla",
     "economicStructure": "Ekonomik Yapı",

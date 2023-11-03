@@ -21,6 +21,27 @@
   "dashboard": {
     "part1": "What are fossils?"
   },
+  "sidebarTabs":{
+    "productSpace": "Product Space",
+    "currentStatus":"Current Status",
+    "economicStructure": "Economic Structure",
+    "strategies": "Strategy Space",
+    "averageUniquityDiversity":"Average Uniquity - Diversity",
+    "economicComplexity":"Economic Complexity",
+    "openForestAverageUbiquity":"Open Forest - Average Ubiquity",
+    "openForestDiversity":"Open Forest - Diversity",
+    "openForestEconomicComplexity":"Open Forest - Economic Complexity",
+    "grossDomesticProductSophistication":"Gross Domestic Product - Sophistication",
+    "specilizationofProductStructure":"Specilization of Product Structure",
+    "complexityofProductStructure":"Complexity of Product Structure",
+    "specilizationinExport":"Complexity of Product Structure",
+    "complexityofExportStructure":"Complexity of Export Structure",
+    "complexityofExportBasket":"Complexity of Export Basket",
+    "efficientFrontier":"Efficient Frontier",
+    "potentialGrowth":"Potential Growth",
+    "recommendedStrategicApproach":"Recommended Strategic Approach",
+    "latentSectorOpportunities":"Latent Sector Opportunities"
+  },
   "homeMap": {
     "SpecificSection": "Jump to Specific Section",
     "EconomicStructure": "Economic Structure",

@@ -93,16 +93,11 @@ const ForceLayoutGraph = React.memo(
                 force: {
                   /*    gravity: 0.01, */
                   /*  friction: 0.5, */
-
                   repulsion: 5,
                   gravity: 0.01,
                   edgeLength: links.map(function (a) {
                     return a.value * 400;
                   }),
-
-                  /*    edgeLength: links.map(function (a) {
-                    return a.value * 400;
-                  }), */
                 },
                 animation: false,
               },

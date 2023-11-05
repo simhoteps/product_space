@@ -1,8 +1,10 @@
-import { Divider, Stack, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Stack, Typography } from "@mui/material";
 import ScatterPlotEChart from "components/antDesignCharts/ScatterPlotEChart";
 import ColumnBasicChartEcharts from "components/chats/ColumnBasicChartEcharts";
-import React, { useEffect, useState } from "react";
 import { Size, useWindowSize } from "utils/hooks/use_window_size";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { useTheme } from "layouts/theme/ThemeContext";
 
 interface ICos {
   AD: string;
@@ -96,36 +98,67 @@ const CurrentStatusPage = ({
       {isSubFilter === "averageUniquityDiversity" &&
         selected &&
         cosData.length > 1 && (
-          <ScatterPlotEChart
-            cheight={`calc(${windowsize?.height}px - 260px)`}
-            sizeField={"city"}
-            xField={"çeşitlilik"}
-            yField={"Ortalama sıradanlık"}
-            colorField={"team"}
-            data={cosData}
-          />
+          <Stack>
+            <ScatterPlotEChart
+              cheight={`calc(${windowsize?.height}px - 260px)`}
+              sizeField={"city"}
+              xField={"çeşitlilik"}
+              yField={"Ortalama sıradanlık"}
+              colorField={"team"}
+              data={cosData}
+            />
+            <DescCom />
+          </Stack>
         )}
       {isSubFilter === "openForestAverageUbiquity" &&
         selected &&
         sposData.length > 1 && (
-          <ScatterPlotEChart
-            cheight={`calc(${windowsize?.height}px - 260px)`}
-            sizeField={"city"}
-            xField={"Ortalama sıradanlık"}
-            yField={"sp"}
-            colorField={"team"}
-            data={sposData}
-          />
+          <Stack>
+            <ScatterPlotEChart
+              cheight={`calc(${windowsize?.height}px - 260px)`}
+              sizeField={"city"}
+              xField={"Ortalama sıradanlık"}
+              yField={"sp"}
+              colorField={"team"}
+              data={sposData}
+            />
+            <DescCom />
+          </Stack>
         )}
       {isSubFilter === "economicComplexity" &&
         selected &&
         sposData.length > 1 && (
-          <ColumnBasicChartEcharts
-            cheight={`calc(${windowsize?.height}px - 260px)`}
-          />
+          <Stack>
+            <ColumnBasicChartEcharts
+              cheight={`calc(${windowsize?.height}px - 260px)`}
+            />
+          </Stack>
         )}
     </Stack>
   );
 };
 
 export default CurrentStatusPage;
+
+const DescCom = () => {
+  const { theme } = useTheme();
+  return (
+    <Stack
+      direction={"row"}
+      alignItems={"center"}
+      gap={"4px"}
+      width={"100%"}
+      justifyContent={"center"}
+    >
+      <FiberManualRecordIcon
+        sx={{
+          color: theme.palette.primary.main,
+          fontSize: "14px",
+        }}
+      />
+      <Typography variant="caption">
+        Tklayıp grafik içindeki değerleri daha detaylı görebilirsiniz
+      </Typography>
+    </Stack>
+  );
+};

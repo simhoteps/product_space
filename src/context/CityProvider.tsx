@@ -14,8 +14,10 @@ export function CityProvider({ children }: CityProviderProps) {
     turkeySGKData[40]
   );
   const [inputValue, setInputValue] = useState("");
-  const [openFilter, setFilter] = useState<string>("economicStructure");
-  const [openSubFilter, setSubFilter] = useState<string>("Introduction");
+  const [openFilter, setFilter] = useState<string>("currentStatus");
+  const [openSubFilter, setSubFilter] = useState<string>(
+    "averageUniquityDiversity"
+  );
 
   return (
     <cityContext.Provider

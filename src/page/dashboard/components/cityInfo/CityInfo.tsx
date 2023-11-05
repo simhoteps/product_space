@@ -23,6 +23,7 @@ import CustomLoading from "components/loading/CustomLoading";
 import ExportBasketTree from "./ExportBasketTree";
 import ExportComplexityTree from "./ExportComplexityTree";
 import CurrentStatusPage from "./CurrentStatusPage";
+import ForceDirectedGraph from "components/d3/useD3";
 
 interface TreeNode {
   name: string;
@@ -224,6 +225,9 @@ const CityInfo = () => {
                     selected?.name && <ExportComplexityTree id={id} />}
                   {openSubFilter === "whatIstheProductSpace" &&
                     selected?.name && <ProductSpace />}
+                  {openSubFilter === "productSpace" && selected?.name && (
+                    <ForceDirectedGraph />
+                  )}
                 </>
               )}
             </ChartContainer>

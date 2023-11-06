@@ -30,6 +30,7 @@
     "babel-preset-react-app": "^10.0.1",
     "d3": "^7.8.5",
     "echarts-for-react": "^3.0.2",
+    "echarts-stat": "^1.2.0",
     "formik": "^2.4.2",
     "i18next-browser-languagedetector": "^7.1.0",
     "libphonenumber-js": "^1.10.39",

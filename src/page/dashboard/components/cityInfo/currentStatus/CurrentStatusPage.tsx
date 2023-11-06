@@ -5,6 +5,9 @@ import ColumnBasicChartEcharts from "components/chats/ColumnBasicChartEcharts";
 import { Size, useWindowSize } from "utils/hooks/use_window_size";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { useTheme } from "layouts/theme/ThemeContext";
+import ScatterLogarithmicRegression from "components/eCharts/ScatterLogarithmicRegression";
+import { scarterdata } from "./scarterdata";
+import { openForestDiversityData } from "./OpenForestDiversityData";
 
 interface ICos {
   AD: string;
@@ -46,6 +49,24 @@ const CurrentStatusPage = ({
   const windowsize: Size = useWindowSize();
   const [cosData, setCosData] = useState<ICosType[]>([]);
   const [sposData, setSposData] = useState<ISposType[]>([]);
+
+  const sData = scarterdata.map((item) => [
+    item.expy,
+    item.KBGSYHlog,
+    17,
+    item.ad,
+    2022,
+  ]);
+
+  const openForestData = openForestDiversityData.map((item) => {
+    return {
+      ...item,
+      city: item.ad,
+      "Sıçrama potansiyeli": item.Div_kc,
+      çeşitlilik: item.of,
+      team: "il",
+    };
+  });
 
   const getCosData = async () => {
     try {
@@ -110,6 +131,7 @@ const CurrentStatusPage = ({
             <DescCom />
           </Stack>
         )}
+
       {isSubFilter === "openForestAverageUbiquity" &&
         selected &&
         sposData.length > 1 && (
@@ -125,6 +147,26 @@ const CurrentStatusPage = ({
             <DescCom />
           </Stack>
         )}
+
+      {isSubFilter === "openForestDiversity" &&
+        selected &&
+        sposData.length > 1 && (
+          <Stack>
+            <ScatterPlotEChart
+              cheight={`calc(${windowsize?.height}px - 260px)`}
+              sizeField={"city"}
+              xField={"Sıçrama potansiyeli"}
+              yField={"çeşitlilik"}
+              colorField={"team"}
+              data={openForestData}
+            />
+            <DescCom />
+          </Stack>
+        )}
+
+      {isSubFilter === "grossDomesticProductSophistication" && selected && (
+        <ScatterLogarithmicRegression data={sData} />
+      )}
       {isSubFilter === "economicComplexity" &&
         selected &&
         sposData.length > 1 && (

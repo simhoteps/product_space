@@ -94,7 +94,6 @@ const buttonArr = [
       "averageUniquityDiversity",
       "openForestAverageUbiquity",
       "openForestDiversity",
-      "openForestEconomicComplexity",
       "grossDomesticProductSophistication",
       "economicComplexity",
     ],

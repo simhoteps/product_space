@@ -13,7 +13,6 @@ const ScatterLogarithmicRegression = (props) => {
   const { theme } = useTheme();
   const windowsize = useWindowSize();
   const formatUtil = echarts.format;
-
   echarts.registerTransform(ecStat.transform.regression);
   return (
     <Stack
@@ -62,6 +61,12 @@ const ScatterLogarithmicRegression = (props) => {
               ].join("");
             },
           }, */
+          toolbox: {
+            feature: {
+              dataZoom: {},
+            
+            },
+          },
       tooltip: {
         formatter: function (params) {
           var tooltipContent = '';
@@ -112,12 +117,13 @@ const ScatterLogarithmicRegression = (props) => {
               label: {
                 show: true,
                 position: "top",
+                textBorderColor: "none",
+                fontSize: 9,
                 formatter: function(params) {
                   return params.value[3]; // Yıl ismini döndürün.
                 },
               },
             },
-        
              {
               name: "line",
               type: "line",
@@ -129,6 +135,15 @@ const ScatterLogarithmicRegression = (props) => {
               labelLayout: { dx: -20 },
               encode: { label: 2, tooltip: 1 },
             }, 
+            {
+              type: "effectScatter",
+              symbolSize: 9,
+              itemStyle: {
+                color: "red",
+              },
+              data:props.data.filter((item) => item[3] === props.selectCity)
+                
+            },
           ],
         }}
       />

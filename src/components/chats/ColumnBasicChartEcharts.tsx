@@ -11,7 +11,13 @@ interface Item {
   eci: number;
 }
 
-const ColumnBasicChartEcharts = ({ cheight }: { cheight: string }) => {
+const ColumnBasicChartEcharts = ({
+  cheight,
+  selectCity,
+}: {
+  cheight: string;
+  selectCity: string;
+}) => {
   const { theme } = useTheme();
   const cityData = turkeySGKData.map((item) => {
     return {
@@ -25,15 +31,18 @@ const ColumnBasicChartEcharts = ({ cheight }: { cheight: string }) => {
     }
     return b.eci - a.eci;
   });
-
-  const sortedData2 = [...cityData].sort((a, b) => b.eci! - a.eci! || 0);
-
   const CityName = sortedData.map((item) => {
     return item.name;
   });
 
   const CityValues = sortedData.map((item) => {
     return item.eci;
+  });
+
+  const cityColors = CityName.map((city) => {
+    return city === selectCity
+      ? theme.palette.error.main
+      : theme.palette.info.dark;
   });
 
   return (
@@ -50,6 +59,10 @@ const ColumnBasicChartEcharts = ({ cheight }: { cheight: string }) => {
           xAxis: {
             type: "category",
             data: CityName,
+
+            pointStyle: {
+              fillOpacity: 1,
+            },
             axisLabel: {
               interval: 0,
               rotate: 90,
@@ -75,6 +88,12 @@ const ColumnBasicChartEcharts = ({ cheight }: { cheight: string }) => {
             {
               data: CityValues,
               type: "bar",
+              itemStyle: {
+                color: (params: any) => {
+                  console.log(params);
+                  return cityColors[params.dataIndex];
+                },
+              },
             },
           ],
         }}

@@ -18,7 +18,6 @@ const ScatterPlotEChart = ({
   cheight: string | number | undefined;
 }) => {
   const { theme } = useTheme();
-
   const config = {
     appendPadding: 30,
     data,

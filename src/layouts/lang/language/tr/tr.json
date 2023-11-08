@@ -46,7 +46,7 @@
   },
 
   "homeMap": {
-    "SpecificSection": "Belirli Bölüme Atla",
+    "specificSection": "Belirli Bölüme Atla",
     "economicStructure": "Ekonomik Yapı",
     "Introduction":"Giriş",
     "exportComplexity":"2023'te İhracatın Karmaşıklığı",

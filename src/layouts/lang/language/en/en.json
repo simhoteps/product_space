@@ -42,7 +42,7 @@
     "latentSectorOpportunities":"Latent Sector Opportunities"
   },
   "homeMap": {
-    "SpecificSection": "Jump to Specific Section",
+    "specificSection": "Jump to Specific Section",
     "EconomicStructure": "Economic Structure",
     "Introduction":"Introduction",
     "ExportComplexity":"Export Complexity in 2023",

@@ -191,7 +191,7 @@ export const SectionButtons = observer(() => {
       <Stack gap={"16px"} width={"100%"}>
         <Divider>
           <Typography variant="subtitle2">
-            {t("sidebarTabs.SpecificSection")}
+            {t("homeMap.specificSection")}
           </Typography>
         </Divider>
 

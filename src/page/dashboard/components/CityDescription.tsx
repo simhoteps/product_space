@@ -98,7 +98,7 @@ const CityDescription = () => {
       </TextBorder>
       <CustomStyleButton
         onClick={() => {
-          setFilter("economicStructure");
+          setFilter("currentStatus");
           setSubFilter("averageUniquityDiversity");
           navigate(`/dashboard/map/${mainStore.selectCitiesValue?.city}`);
         }}

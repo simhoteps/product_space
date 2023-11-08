@@ -24,6 +24,7 @@ import ExportBasketTree from "./ExportBasketTree";
 import ExportComplexityTree from "./ExportComplexityTree";
 import CurrentStatusPage from "./currentStatus/CurrentStatusPage";
 import ForceDirectedGraph from "components/d3/useD3";
+import StrategiesView from "./strategies/StrategiesView";
 
 interface TreeNode {
   name: string;
@@ -199,6 +200,10 @@ const CityInfo = () => {
               ) : (
                 <>
                   <CurrentStatusPage
+                    isSubFilter={openSubFilter}
+                    selected={selected?.name}
+                  />
+                  <StrategiesView
                     isSubFilter={openSubFilter}
                     selected={selected?.name}
                   />

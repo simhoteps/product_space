@@ -145,40 +145,6 @@ const buttonArr = [
       "latentSectorOpportunities",
     ],
   },
-
-  /*
-    {
-    name: "marketDynamics",
-    icon: (
-      <IconMarketDynamics
-        sx={{
-          width: { xs: "24px ", sm: "42px" },
-          height: { xs: "24px ", sm: "42px" },
-        }}
-      />
-    ),
-    subButton: [
-      "exportGrowthDynamics",
-      "growthinGlobalMarketShare",
-      "diversificationIntoNewProducts",
-    ],
-  },   
-  {
-    name: "growthOpportunities",
-    icon: (
-      <IconGrowthOpportunities
-        sx={{
-          width: { xs: "24px ", sm: "42px" },
-          height: { xs: "24px ", sm: "42px" },
-        }}
-      />
-    ),
-    subButton: [
-      "potentialGrowthOpportunities",
-      "newProductOpportunities",
-      "summary",
-    ],
-  }, */
 ];
 
 export const SectionButtons = observer(() => {
@@ -255,9 +221,10 @@ export const SectionDashButtons = () => {
                   </Typography>
                 </Divider>
                 <Stack direction={"row"} gap={"16px"} width={"100%"}>
-                  {item.subButton.map((sub) => {
+                  {item.subButton.map((sub, i) => {
                     return (
                       <SubButton
+                        key={`subButton${i}`}
                         isSelect={sub === openSubFilter}
                         onClick={() => {
                           setSubFilter(sub);

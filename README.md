@@ -4,7 +4,7 @@ Atlas Of Turkey's Product Space
 To clone and run this application, you'll need Git, Node.js and npm
 
 #  Live Link
-You can view the live version of the site:  <a href="https://urunuzayi.netlify.app/dashboard">Product Space</a>
+You can view the live version of the site:  <a href="https://urunuzayi.netlify.app/home">Product Space</a>
 
 ```
 

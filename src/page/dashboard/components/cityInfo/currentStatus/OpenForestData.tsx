@@ -1,8 +1,8 @@
 import React from "react";
-import { openForestDiversityData } from "./openForestDiversityData";
 import { Stack } from "@mui/material";
 import { Size, useWindowSize } from "utils/hooks/use_window_size";
 import BasicScatterEChart from "components/eCharts/BasicScatterEChart";
+import { openForestDiversityData } from "./OpenForestDiversityData";
 
 const OpenForestData = ({ selectCity }: { selectCity: string }) => {
   const windowsize = useWindowSize();

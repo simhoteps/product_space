@@ -18,9 +18,9 @@ const PrivateRoutes = () => {
         <Route path="dashboard" element={<DashboardPage />} />
         <Route path="dashboard/map/:id" element={<CityInfo />} />
         <Route path="account" element={<AccountPage />} />
-        <Route path="about" element={<AboutPage />} />
+        {/*         <Route path="about" element={<AboutPage />} />
         <Route path="data" element={<DataPage />} />
-        <Route path="reports" element={<ReportsView />} />
+        <Route path="reports" element={<ReportsView />} /> */}
         <Route path="*" element={<Navigate to="/error/404" />} />
       </Route>
     </Routes>

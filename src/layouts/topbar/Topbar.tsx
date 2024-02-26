@@ -62,7 +62,6 @@ const Topbar = () => {
   const { loginStore } = useStores();
 
   return (
-    /*     <AppBarCustom data-testid="headerAppBar" /*  elevation={0} > */
     <ToolbarCustom variant="dense">
       <ResponsiveBox>
         <Link
@@ -88,13 +87,10 @@ const Topbar = () => {
             <HeaderNavMobile />
             <LanguageSwitcher />
             <ThemeSwitcher />
-            {/*      <NotificationsMenu />
-            <AccountSettings /> */}
           </RowBox>
         )}
       </ResponsiveBox>
     </ToolbarCustom>
-    /*     </AppBarCustom> */
   );
 };
 

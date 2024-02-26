@@ -55,27 +55,6 @@ export const HeaderNav = () => {
       >
         {t("topbar.dashboard")}
       </CustomButton>
-      <CustomButton
-        onClick={() => {
-          navigate(`/data`);
-        }}
-      >
-        {t("topbar.data")}
-      </CustomButton>
-      <CustomButton
-        onClick={() => {
-          navigate(`/reports`);
-        }}
-      >
-        {t("topbar.reports")}
-      </CustomButton>
-      <CustomButton
-        onClick={() => {
-          navigate(`/about`);
-        }}
-      >
-        {t("topbar.about")}
-      </CustomButton>
     </RowBox>
   );
 };
@@ -170,30 +149,6 @@ export const HeaderNavMobile = () => {
             }}
           >
             <Typography variant="caption"> {t("topbar.dashboard")}</Typography>
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              navigate(`/data`);
-              handleClose();
-            }}
-          >
-            <Typography variant="caption"> {t("topbar.data")}</Typography>
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              navigate(`/reports`);
-              handleClose();
-            }}
-          >
-            <Typography variant="caption">{t("topbar.reports")}</Typography>
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              navigate(`/about`);
-              handleClose();
-            }}
-          >
-            <Typography variant="caption"> {t("topbar.about")}</Typography>
           </MenuItem>
         </Stack>
       </Menu>

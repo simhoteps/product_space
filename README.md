@@ -1,7 +1,10 @@
 Atlas Of Turkey's Product Space
 
 # How To Use
-To clone and run this application, you'll need Git, Node.js and npm
+# To clone and run this application, you'll need Git, Node.js and npm
+
+Live Link
+You can view the live version of the site:<li> <a href="https://urunuzayi.netlify.app/dashboard">Product Space</a></li> 
 
 ```
 
@@ -15,9 +18,8 @@ Install dependencies
 $ npm install
 
 Run the app
-$ npm run ios
-$ npm run android
-$ npm run web
+$ npm start
+
 
 ```
 
